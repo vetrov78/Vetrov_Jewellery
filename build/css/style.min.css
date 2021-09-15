@@ -1,2 +1,2 @@
-h1{color:red}
+.page{height:100%;scroll-behavior:smooth}.page__body{overflow-x:hidden;min-height:100%;min-width:320px;margin:auto;display:grid;grid-template-rows:-webkit-min-content 1fr -webkit-min-content;grid-template-rows:min-content 1fr min-content}.page-footer,.page-header{border:1px solid #000}
 /*# sourceMappingURL=style.min.css.map */
