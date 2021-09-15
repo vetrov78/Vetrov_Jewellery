@@ -1,3 +1,5 @@
-h1 {
-  color: red;
-}
+// GLOBALS
+
+@import "./global/variables.scss";
+@import "./global/fonts.scss";
+@import "./global/globals.scss";
