@@ -51,10 +51,18 @@
   font-weight: 500;
   font-size: 14px;
   color: $main-black;
+
+  & li {
+    margin-left: 35px;
+  }
 }
 
 .page-header__login-cart-item {
-  margin-left: 35px;
+  color: $main-black;
+
+  &--login {
+    cursor: pointer;
+  }
 }
 
 .page-header__menu-list {

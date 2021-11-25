@@ -7,6 +7,7 @@
   <title>Стартовый шаблон</title>
   <link rel="stylesheet" href="css/style.min.css">
 </head>
+
 <body class="page__body">
   <header class="page-header">
     <h1 class="visually-hidden">Page-header</h1>
@@ -24,8 +25,12 @@
         </svg>
       </a>
       <ul class="page-header__login-cart-list">
-        <li class="page-header__login-cart-item">Login</li>
-        <li class="page-header__login-cart-item">Cart 0</li>
+        <li>
+          <a class="page-header__login-cart-item page-header__login-cart-item--login" id="login-button">Login</a>
+        </li>
+        <li>
+          <a class="page-header__login-cart-item" href="#">Cart 0</a>
+        </li>
       </ul>
       <ul class="page-header__menu-list">
         <li>
@@ -47,11 +52,29 @@
       </ul>
     </section>
   </header>
+
   <main class="page-main">
     <h1>Добро пожаловать в Лигу А.</h1>
   </main>
+
   <footer class="page-footer">
     <h1>Page-footer</h1>
   </footer>
+
+  <template id="login-popup">
+    <div class="login-popup__container">
+      <div class="login-popup__promo-image"></div>
+      <form action="POST">
+        <button class="login-popup__close-button" type="button">
+          <svg>
+            <use xlink:href="img/sprite.svg#close-icon"></use>
+          </svg>
+        </button>
+      </form>
+    </div>
+  </template>
+
+  <script src="js/jquery-3.6.0.js"></script>
+  <script src="js/script.js"></script>
 </body>
 </html>
