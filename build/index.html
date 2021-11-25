@@ -9,7 +9,43 @@
 </head>
 <body class="page__body">
   <header class="page-header">
-    <h1>Page-header</h1>
+    <h1 class="visually-hidden">Page-header</h1>
+    <section class="page-header__container">
+      <label class="page-header__search">
+        <h2 class="visually-hidden">search block</h2>
+        <svg>
+          <use xlink:href="/img/sprite.svg#search"></use>
+        </svg>
+        <input type="text" placeholder="Type here to search" aria-label="Type here to search">
+      </label>
+      <a class="page-header__logo-link" href="#">
+        <svg>
+          <use xlink:href="/img/sprite.svg#logo"></use>
+        </svg>
+      </a>
+      <ul class="page-header__login-cart-list">
+        <li class="page-header__login-cart-item">Login</li>
+        <li class="page-header__login-cart-item">Cart 0</li>
+      </ul>
+      <ul class="page-header__menu-list">
+        <li>
+          <a class="page-header__menu-item" href="#">What’s new</a>
+        </li>
+        <li>
+          <a class="page-header__menu-item" href="#">Chokers</a>
+        </li>
+        <li>
+          <a class="page-header__menu-item" href="#">Necklaces</a>
+        </li>
+        <li>
+          <a class="page-header__menu-item" href="#">Rings</a>
+        </li>
+        <li>
+          <a class="page-header__menu-item" href="#">Earrings</a>
+        </li>
+
+      </ul>
+    </section>
   </header>
   <main class="page-main">
     <h1>Добро пожаловать в Лигу А.</h1>
