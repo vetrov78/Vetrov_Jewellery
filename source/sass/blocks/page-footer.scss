@@ -1,3 +1,121 @@
 .page-footer {
-  border: 1px solid $main-black;
+  background-color: $black;
+  color: $white;
+  display: grid;
+  grid-template-columns: minmax(500px, auto) repeat(3, auto);
+  padding: 100px 98px;
+}
+
+.page-footer__promo {
+  grid-row-start: 1;
+  grid-row-end: 2;
+
+  & h2 {
+    margin: 0;
+    font-family: "CormorantGaramond", "Arial", serif;
+    font-size: 34px;
+    line-height: 44px;
+  }
+
+  & p {
+    margin: 25px 0 0;
+    color: $input-placeholder;
+  }
+}
+
+.page-footer__email-input-block {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 54px;
+
+  &::before {
+    position: absolute;
+    content: "";
+    bottom: -10px;
+    width: 100%;
+    height: 1px;
+    background-color: $white;
+  }
+
+  & input {
+    border-style: none;
+    background-color: transparent;
+    font-weight: 500;
+    font-size: 14px;
+    flex: 1 1 397px;
+    color: $white;
+
+    &:focus {
+      outline: none;
+    }
+  }
+
+  & a {
+    font-weight: 500;
+    white-space: nowrap;
+  }
+
+  & svg {
+    margin-left: 12px;
+    align-self: center;
+    width: 29px;
+    height: 9px;
+  }
+}
+
+.page-footer__signin-link {
+  color: $white;
+
+  &:hover {
+    opacity: 0.7;
+  }
+}
+
+.page-footer__menu-list {
+  list-style: none;
+
+  &--1 {
+    grid-column-start: 2;
+    grid-column-end: 3;
+  }
+
+  & li:not(:first-child) {
+    margin-top: 30px;
+  }
+}
+
+.page-footer__menu-item-link {
+  color: $white;
+  font-weight: 500;
+
+  &:hover {
+    opacity: 0.7;
+  }
+}
+
+.page-footer__socials-list {
+  list-style: none;
+
+  & li:not(:first-child) {
+    margin-top: 30px;
+  }
+}
+
+.page-footer__socials-item {
+  color: $white;
+
+  & svg {
+    width: 15px;
+    height: 15px;
+  }
+
+  & span {
+    margin-left: 15px;
+    font-weight: 500;
+  }
+
+  &:hover {
+    opacity: 0.7;
+  }
 }

@@ -12,6 +12,11 @@
   <header class="page-header">
     <h1 class="visually-hidden">Page-header</h1>
     <section class="page-header__container">
+      <a class="page-header__burger-link" tabindex="0">
+        <svg>
+          <use xlink:href="/img/sprite.svg#burger"></use>
+        </svg>
+      </a>
       <label class="page-header__search">
         <h2 class="visually-hidden">search block</h2>
         <svg>
@@ -26,27 +31,27 @@
       </a>
       <ul class="page-header__login-cart-list">
         <li>
-          <a class="page-header__login-cart-item page-header__login-cart-item--login" id="login-button" tabindex="0">Login</a>
+          <a class="page-header__login-cart-item-link page-header__login-cart-item-link--login" id="login-button" tabindex="0">Login</a>
         </li>
         <li>
-          <a class="page-header__login-cart-item" href="#">Cart 0</a>
+          <a class="page-header__login-cart-item-link" href="#">Cart 0</a>
         </li>
       </ul>
       <ul class="page-header__menu-list">
         <li>
-          <a class="page-header__menu-item" href="#">What’s new</a>
+          <a class="page-header__menu-item-link" href="#">What’s new</a>
         </li>
         <li>
-          <a class="page-header__menu-item" href="#">Chokers</a>
+          <a class="page-header__menu-item-link" href="#">Chokers</a>
         </li>
         <li>
-          <a class="page-header__menu-item" href="#">Necklaces</a>
+          <a class="page-header__menu-item-link" href="#">Necklaces</a>
         </li>
         <li>
-          <a class="page-header__menu-item" href="#">Rings</a>
+          <a class="page-header__menu-item-link" href="#">Rings</a>
         </li>
         <li>
-          <a class="page-header__menu-item" href="#">Earrings</a>
+          <a class="page-header__menu-item-link" href="#">Earrings</a>
         </li>
 
       </ul>
@@ -54,11 +59,90 @@
   </header>
 
   <main class="page-main">
-    <h1>Добро пожаловать в Лигу А.</h1>
+    <h1 class="visually-hidden">Jewellery shop</h1>
+    <div class="page-main__title-container">
+      <h2>PERFECTION</h2>
+      <p>made to be yours</p>
+    </div>
   </main>
 
   <footer class="page-footer">
-    <h1>Page-footer</h1>
+    <h1 class="visually-hidden">Page-footer</h1>
+    <section class="page-footer__promo">
+      <h2>The good stuff in your inbox </h2>
+      <p>News and updates from CH. No spam, we promise.</p>
+      <label class="page-footer__email-input-block" for="email">
+        <input type="text" placeholder="Your E-mail" aria-label="Your E-mail">
+        <a class="page-footer__signin-link" href="#" tabindex="0">
+          <span>Sign Up</span>
+          <svg>
+            <use xlink:href="/img/sprite.svg#arrow"></use>
+          </svg>
+        </a>
+      </label>
+    </section>
+    <ul class="page-footer__menu-list page-footer__menu-list--1">
+      <li>
+        <a class="page-footer__menu-item-link" href="#">Ordering & Payment</a>
+      </li>
+      <li>
+        <a class="page-footer__menu-item-link" href="#">Terms & Conditions</a>
+      </li>
+      <li>
+        <a class="page-footer__menu-item-link" href="#">Returns & Exchanges</a>
+      </li>
+      <li>
+        <a class="page-footer__menu-item-link" href="#">Delivery</a>
+      </li>
+    </ul>
+    <ul class="page-footer__menu-list page-footer__menu-list--2">
+      <li>
+        <a class="page-footer__menu-item-link" href="#">About CH</a>
+      </li>
+      <li>
+        <a class="page-footer__menu-item-link" href="#">Stores & Hours</a>
+      </li>
+      <li>
+        <a class="page-footer__menu-item-link" href="#">Jobs</a>
+      </li>
+      <li>
+        <a class="page-footer__menu-item-link" href="#">Contact Us</a>
+      </li>
+    </ul>
+    <ul class="page-footer__socials-list">
+      <li>
+        <a class="page-footer__socials-item" href="#">
+          <svg>
+            <use xlink:href="/img/sprite.svg#facebook"></use>
+          </svg>
+          <span>Facebook</span>
+        </a>
+      </li>
+      <li>
+        <a class="page-footer__socials-item" href="#">
+          <svg>
+            <use xlink:href="/img/sprite.svg#instagram"></use>
+          </svg>
+          <span>Instagram</span>
+        </a>
+      </li>
+      <li>
+        <a class="page-footer__socials-item" href="#">
+          <svg>
+            <use xlink:href="/img/sprite.svg#pinterest"></use>
+          </svg>
+          <span>Pinterest</span>
+        </a>
+      </li>
+      <li>
+        <a class="page-footer__socials-item" href="#">
+          <svg>
+            <use xlink:href="/img/sprite.svg#twitter"></use>
+          </svg>
+          <span>Twitter</span>
+        </a>
+      </li>
+    </ul>
   </footer>
 
   <template id="login-popup">

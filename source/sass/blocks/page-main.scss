@@ -1,0 +1,29 @@
+.page-main__title-container {
+  position: relative;
+  height: 463px;
+  background: linear-gradient($image-background, $image-background),
+              center / cover url("../img/main-promo@1x.jpg");
+  text-align: center;
+  color: $white;
+  padding-top: 195px;
+  box-sizing: border-box;
+
+  & h2 {
+    margin: 0;
+    font-family: "CormorantGaramond", "Times", serif;
+    font-weight: 700;
+    font-size: 45px;
+    line-height: 58px;
+    text-transform: uppercase;
+    letter-spacing: 0.03em;
+  }
+
+  & p {
+    margin: 0;
+    font-family: "CormorantGaramond_italic", "Times", serif;
+    font-size: 38px;
+    line-height: 49px;
+  }
+
+
+}

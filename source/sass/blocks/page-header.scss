@@ -1,14 +1,27 @@
 .page-header__container {
-  border: 1px solid $main-black;
-
   margin: 0 98px;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: 115px 61px;
+
+  @media (max-width: $tablet-width) {
+
+  }
+}
+
+.page-header__burger-link {
+  cursor: pointer;
+
+  & svg {
+    width: 25px;
+    height: 16px;
+    stroke: $main-black;
+  }
 }
 
 .page-header__search {
   display: flex;
+  align-items: center;
   height: 14px;
   margin-top: 45px;
 
@@ -18,6 +31,7 @@
   }
 
   & input {
+    height: 21px;
     margin-left: 15px;
     border-style: none;
     font-family: "Poppins", "Arial", sans-serif;
@@ -57,11 +71,15 @@
   }
 }
 
-.page-header__login-cart-item {
+.page-header__login-cart-item-link {
   color: $main-black;
 
   &--login {
     cursor: pointer;
+  }
+
+  &:hover {
+    opacity: 0.7;
   }
 }
 
@@ -80,10 +98,14 @@
   }
 }
 
-.page-header__menu-item {
+.page-header__menu-item-link {
   font-family: "Poppins", "Arial", sans-serif;
   font-weight: 500;
   font-size: 16px;
   line-height: 24px;
   color: $main-black;
+
+  &:hover {
+    opacity: 0.7;
+  }
 }
