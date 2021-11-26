@@ -26,7 +26,7 @@
       </a>
       <ul class="page-header__login-cart-list">
         <li>
-          <a class="page-header__login-cart-item page-header__login-cart-item--login" id="login-button">Login</a>
+          <a class="page-header__login-cart-item page-header__login-cart-item--login" id="login-button" tabindex="0">Login</a>
         </li>
         <li>
           <a class="page-header__login-cart-item" href="#">Cart 0</a>
@@ -64,17 +64,33 @@
   <template id="login-popup">
     <div class="login-popup__container">
       <div class="login-popup__promo-image"></div>
-      <form action="POST">
-        <button class="login-popup__close-button" type="button">
-          <svg>
-            <use xlink:href="img/sprite.svg#close-icon"></use>
-          </svg>
-        </button>
-      </form>
+      <h2>Log In</h2>
+      <form action="POST"></form>
+        <div class="login-popup__inputs-container">
+          <label for="mail">
+            <input type="text" id="mail" aria-label="Your E-mail" placeholder="Your E-mail" required="">
+          </label>
+          <label for="password">
+            <input type="text" id="password" aria-label="Password" placeholder="Password" required="">
+          </label>
+          <a class="login-popup__forgot-password-link" href="#">Forgot your password?</a>
+        </div>
+        <button class="login-popup__submit-button" type="submit">Log In</button>
+        <div></div>
+      
+      <p class="login-popup__signup-question">Don’t have an account?
+        <a href="#">Sign up</a>
+      </p>
+      <button class="login-popup__close-button" type="button">
+        <svg>
+          <use xlink:href="img/sprite.svg#close-icon"></use>
+        </svg>
+      </button>
     </div>
   </template>
 
   <script src="js/jquery-3.6.0.js"></script>
+  <script src="js/jquery-ui.js"></script>
   <script src="js/script.js"></script>
 </body>
 </html>
