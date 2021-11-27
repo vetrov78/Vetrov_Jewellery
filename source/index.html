@@ -12,11 +12,6 @@
   <header class="page-header">
     <h1 class="visually-hidden">Page-header</h1>
     <section class="page-header__container">
-      <a class="page-header__burger-link" tabindex="0">
-        <svg>
-          <use xlink:href="/img/sprite.svg#burger"></use>
-        </svg>
-      </a>
       <label class="page-header__search">
         <h2 class="visually-hidden">search block</h2>
         <svg>
@@ -34,7 +29,7 @@
           <a class="page-header__login-cart-item-link page-header__login-cart-item-link--login" id="login-button" tabindex="0">Login</a>
         </li>
         <li>
-          <a class="page-header__login-cart-item-link" href="#">Cart 0</a>
+          <a class="page-header__login-cart-item-link page-header__login-cart-item-link--cart" href="#">Cart 0</a>
         </li>
       </ul>
       <ul class="page-header__menu-list">
@@ -54,6 +49,27 @@
           <a class="page-header__menu-item-link" href="#">Earrings</a>
         </li>
 
+      </ul>
+      <a class="page-header__burger-link" tabindex="0">
+        <svg>
+          <use xlink:href="/img/sprite.svg#burger"></use>
+        </svg>
+      </a>
+      <a class="page-header__mail-link" href="#">
+        <svg>
+          <use xlink:href="/img/sprite.svg#mail"></use>
+        </svg>
+      </a>
+      <ul class="page-header__add-menu-list">
+        <li>
+          <a class="page-header__add-menu-item-link" href="#">About CH</a>
+        </li>
+        <li>
+          <a class="page-header__add-menu-item-link" href="#">Stores & Hours</a>
+        </li>
+        <li>
+          <a class="page-header__add-menu-item-link" href="#">Contact Us</a>
+        </li>
       </ul>
     </section>
   </header>

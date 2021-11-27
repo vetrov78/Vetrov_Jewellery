@@ -1,31 +1,50 @@
 .page-header__container {
-  margin: 0 98px;
+  padding: 0 98px;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: 115px 61px;
 
   @media (max-width: $tablet-width) {
-
+    grid-template-areas:  "burger logo mail"
+                          "search search search"
+                          "menu menu menu"
+                          "add_m add_m add_m"
+                          "login login login";
+    grid-template-rows: repeat(5, min-content);
+    padding: 30px 45px 80px;
+    background-color: $main-brown;
   }
 }
 
 .page-header__burger-link {
-  cursor: pointer;
+  display: none;
 
-  & svg {
-    width: 25px;
-    height: 16px;
-    stroke: $main-black;
+  @media (max-width: $tablet-width) {
+    display: block;
+    justify-self: start;
+    align-self: center;
+    grid-area: burger;
+    cursor: pointer;
+
+    & svg {
+      align-self: center;
+      width: 25px;
+      height: 16px;
+      stroke: $white;
+    }
   }
+
 }
 
 .page-header__search {
   display: flex;
   align-items: center;
   height: 14px;
-  margin-top: 45px;
+  padding-top: 45px;
+  box-sizing: border-box;
 
   & svg {
+    fill: $main-black;
     width: 14px;
     height: 14px;
   }
@@ -42,6 +61,31 @@
       color: $input-placeholder;
     }
   }
+
+  @media (max-width: $tablet-width) {
+    position: relative;
+    grid-area: search;
+    display: flex;
+    justify-content: center;
+
+    & input {
+      margin: 0;
+      width: 100%;
+      height: 40px;
+      background-color: $light-brown;
+      border-radius: 21px;
+
+      &::placeholder{
+        color: transparent;
+      }
+    }
+
+    & svg {
+      position: absolute;
+      left: 10px;
+      fill: $white;
+    }
+  }
 }
 
 .page-header__logo-link {
@@ -51,6 +95,15 @@
   & svg {
     width: 66px;
     height: 66px;
+    fill: $main-brown;
+  }
+
+  @media (max-width: $tablet-width) {
+    grid-template-area: logo;
+
+    & svg {
+      fill: $white;
+    }
   }
 }
 
@@ -69,6 +122,16 @@
   & li {
     margin-left: 35px;
   }
+
+  @media (max-width: $tablet-width) {
+    grid-area: login;
+    margin: 50px 0 0;
+    justify-self: start;
+
+    & li {
+      margin: 0;
+    }
+  }
 }
 
 .page-header__login-cart-item-link {
@@ -81,10 +144,19 @@
   &:hover {
     opacity: 0.7;
   }
+
+  @media (max-width: $tablet-width) {
+    color: $white;
+
+    &--cart {
+      display: none;
+    }
+  }
 }
 
 .page-header__menu-list {
   list-style: none;
+  margin: 0;
   padding: 0;
   display: flex;
   justify-content: center;
@@ -94,6 +166,20 @@
   & li {
     &:not(:first-child) {
       margin-left: 35px;
+    }
+  }
+
+  @media (max-width: $tablet-width) {
+    grid-area: menu;
+    flex-direction: column;
+    margin-top: 15px;
+
+    & li {
+      margin-top: 40px;
+
+      &:not(:first-child) {
+        margin-left: 0;
+      }
     }
   }
 }
@@ -108,4 +194,55 @@
   &:hover {
     opacity: 0.7;
   }
+
+  @media (max-width: $tablet-width) {
+    font-size: 24px;
+    line-height: 36px;
+    color: $white;
+  }
+}
+
+.page-header__mail-link {
+  display: none;
+
+  @media (max-width: $tablet-width) {
+    cursor: pointer;
+    justify-self: end;
+    align-self: center;
+    display: block;
+    grid-area: mail;
+
+    &:hover {
+      opacity: 0.7;
+    }
+
+    & svg {
+      width: 20px;
+      height: 20px;
+      stroke: $white;
+      fill: transparent;
+    }
+  }
+}
+
+.page-header__add-menu-list {
+  display: none;
+
+  @media (max-width: $tablet-width) {
+    list-style: none;
+    padding: 0;
+    grid-area: add_m;
+    display: flex;
+    flex-direction: column;
+    margin-top: 25px;
+
+    & li {
+      margin-top: 30px;
+    }
+  }
+}
+
+.page-header__add-menu-item-link {
+  color: $white;
+  opacity: 0.75;
 }
