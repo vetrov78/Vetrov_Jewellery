@@ -9,9 +9,10 @@
 </head>
 
 <body class="page__body">
-  <header class="page-header">
+  <header class="page-header page-header--opened no-js">
     <h1 class="visually-hidden">Page-header</h1>
-    <section class="page-header__container">
+
+
       <label class="page-header__search">
         <h2 class="visually-hidden">search block</h2>
         <svg>
@@ -19,11 +20,13 @@
         </svg>
         <input type="text" placeholder="Type here to search" aria-label="Type here to search">
       </label>
+
       <a class="page-header__logo-link" href="#">
         <svg>
           <use xlink:href="/img/sprite.svg#logo"></use>
         </svg>
       </a>
+
       <ul class="page-header__login-cart-list">
         <li>
           <a class="page-header__login-cart-item-link page-header__login-cart-item-link--login" id="login-button" tabindex="0">Login</a>
@@ -32,45 +35,51 @@
           <a class="page-header__login-cart-item-link page-header__login-cart-item-link--cart" href="#">Cart 0</a>
         </li>
       </ul>
-      <ul class="page-header__menu-list">
-        <li>
-          <a class="page-header__menu-item-link" href="#">What’s new</a>
-        </li>
-        <li>
-          <a class="page-header__menu-item-link" href="#">Chokers</a>
-        </li>
-        <li>
-          <a class="page-header__menu-item-link" href="#">Necklaces</a>
-        </li>
-        <li>
-          <a class="page-header__menu-item-link" href="#">Rings</a>
-        </li>
-        <li>
-          <a class="page-header__menu-item-link" href="#">Earrings</a>
-        </li>
 
-      </ul>
-      <a class="page-header__burger-link" tabindex="0">
+      <div class="page-header__menu-toggle" tabindex="0">
         <svg>
           <use xlink:href="/img/sprite.svg#burger"></use>
         </svg>
-      </a>
+      </div>
+
       <a class="page-header__mail-link" href="#">
         <svg>
           <use xlink:href="/img/sprite.svg#mail"></use>
         </svg>
       </a>
-      <ul class="page-header__add-menu-list">
-        <li>
-          <a class="page-header__add-menu-item-link" href="#">About CH</a>
-        </li>
-        <li>
-          <a class="page-header__add-menu-item-link" href="#">Stores & Hours</a>
-        </li>
-        <li>
-          <a class="page-header__add-menu-item-link" href="#">Contact Us</a>
-        </li>
-      </ul>
+
+      <nav class="page-header__navigation">
+        <ul class="page-header__menu-list">
+          <li>
+            <a class="page-header__menu-item-link" href="#">What’s new</a>
+          </li>
+          <li>
+            <a class="page-header__menu-item-link" href="#">Chokers</a>
+          </li>
+          <li>
+            <a class="page-header__menu-item-link" href="#">Necklaces</a>
+          </li>
+          <li>
+            <a class="page-header__menu-item-link" href="#">Rings</a>
+          </li>
+          <li>
+            <a class="page-header__menu-item-link" href="#">Earrings</a>
+          </li>
+
+        </ul>
+        <ul class="page-header__add-menu-list">
+          <li>
+            <a class="page-header__add-menu-item-link" href="#">About CH</a>
+          </li>
+          <li>
+            <a class="page-header__add-menu-item-link" href="#">Stores & Hours</a>
+          </li>
+          <li>
+            <a class="page-header__add-menu-item-link" href="#">Contact Us</a>
+          </li>
+        </ul>
+      </nav>
+
     </section>
   </header>
 

@@ -1,5 +1,25 @@
 'use strict';
 (function ($) {
+  $('.page-header').removeClass('no-js');
+  $('.page-header').addClass('page-header--closed');
+  $('.page-header').removeClass('page-header--opened');
+  $('.page-header__navigation').css('height', '100%');
+
+  $('.page-header__menu-toggle').on('click', function () {
+    if (document.body.clientWidth < 1024) {
+      $('body').toggleClass('body-no-scroll');
+      var headerHeight = $('.page-header').height() === $(window).height() ? 126 : $(window).height();
+      $('.page-header').css('height', headerHeight);
+
+      // pageHeaderNavList.style.height = pageHeaderNavList.style.height === '100%' ? '' : '100%';
+    }
+    if ($('.page-header').hasClass('page-header--closed')) {
+      $('.page-header').removeClass('page-header--closed').addClass('page-header--opened');
+    } else {
+      $('.page-header').removeClass('page-header--opened').addClass('page-header--closed');
+    }
+  });
+
   // LOGIN POPUP OPEN
   var templateFrag = $('#login-popup').prop('content');
   var loginWindow = $(templateFrag)
@@ -12,17 +32,7 @@
     var closeButton = $('.login-popup__close-button');
     $('#popup-name').focus();
 
-    // закрытие по клику вне модального окна
-    window.addEventListener('click', function (evt) {
-      var isPathContainForm = function (x) {
-        return (typeof x.className === 'string') ? x.className.includes('login-popup__container') || x.id.includes('login-button') : false;
-      };
-      if (!evt.composedPath().some(isPathContainForm)) {
-        removeModal(evt);
-      }
-    });
-
-    // недоступность элементов вне модального окна
+    // TURN OF ANOTHER INTERACTIVE ELEMENTS
     var modalNodes = $('.login-popup__container').find(':focusable');
     var focusableNodes = $(':focusable');
     for (var i = 0; i < focusableNodes.length; i++) {
@@ -35,7 +45,17 @@
       }
     }
 
-    // закрытие модалки по нажатию на Esc клавиатуры
+    // CLOSE BY OVERLAY CLICK
+    window.addEventListener('click', function (evt) {
+      var isPathContainForm = function (x) {
+        return (typeof x.className === 'string') ? x.className.includes('login-popup__container') || x.id.includes('login-button') : false;
+      };
+      if (!evt.composedPath().some(isPathContainForm)) {
+        removeModal(evt);
+      }
+    });
+
+    // CLOSE BY ESC CLICK
     var onEscRemoveModal = function (evt) {
       if (evt.key === 'Escape' || evt.key === 'Esc') {
         removeModal(evt);
@@ -63,18 +83,4 @@
     closeButton.on('click', removeModal);
   });
 
-  // var pageHeader = document.querySelector('.page-header');
-  // var headerToggle = document.querySelector('.page-header__toggle');
-
-  // pageHeader.classList.remove('page-header--nojs');
-
-  // headerToggle.addEventListener('click', function () {
-  //   if (pageHeader.classList.contains('page-header--closed')) {
-  //     pageHeader.classList.remove('page-header--closed');
-  //     pageHeader.classList.add('page-header--opened');
-  //   } else {
-  //     pageHeader.classList.add('page-header--closed');
-  //     pageHeader.classList.remove('page-header--opened');
-  //   }
-  // });
 })(jQuery);

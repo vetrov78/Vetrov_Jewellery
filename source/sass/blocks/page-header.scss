@@ -1,39 +1,36 @@
-.page-header__container {
+.page-header {
   padding: 0 98px;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: 115px 61px;
 
   @media (max-width: $tablet-width) {
-    grid-template-areas:  "burger logo mail"
-                          "search search search"
-                          "menu menu menu"
-                          "add_m add_m add_m"
-                          "login login login";
-    grid-template-rows: repeat(5, min-content);
-    padding: 30px 45px 80px;
-    background-color: $main-brown;
+    padding: 0 45px;
   }
 }
 
-.page-header__burger-link {
+.page-header__menu-toggle {
   display: none;
 
   @media (max-width: $tablet-width) {
     display: block;
     justify-self: start;
     align-self: center;
-    grid-area: burger;
+    grid-area: toggle;
     cursor: pointer;
 
     & svg {
       align-self: center;
       width: 25px;
       height: 16px;
-      stroke: $white;
     }
   }
+}
 
+.no-js .page-header__menu-toggle {
+  & svg {
+    stroke: $main-brown;
+  }
 }
 
 .page-header__search {
@@ -99,11 +96,7 @@
   }
 
   @media (max-width: $tablet-width) {
-    grid-template-area: logo;
-
-    & svg {
-      fill: $white;
-    }
+    grid-area: logo;
   }
 }
 
@@ -122,16 +115,6 @@
   & li {
     margin-left: 35px;
   }
-
-  @media (max-width: $tablet-width) {
-    grid-area: login;
-    margin: 50px 0 0;
-    justify-self: start;
-
-    & li {
-      margin: 0;
-    }
-  }
 }
 
 .page-header__login-cart-item-link {
@@ -144,13 +127,14 @@
   &:hover {
     opacity: 0.7;
   }
+}
+
+.page-header__navigation {
+  grid-column-start: 1;
+  grid-column-end: 4;
 
   @media (max-width: $tablet-width) {
-    color: $white;
-
-    &--cart {
-      display: none;
-    }
+    grid-area: nav;
   }
 }
 
@@ -160,8 +144,6 @@
   padding: 0;
   display: flex;
   justify-content: center;
-  grid-column-start: 1;
-  grid-column-end: 4;
 
   & li {
     &:not(:first-child) {
@@ -170,7 +152,6 @@
   }
 
   @media (max-width: $tablet-width) {
-    grid-area: menu;
     flex-direction: column;
     margin-top: 15px;
 
@@ -207,21 +188,20 @@
 
   @media (max-width: $tablet-width) {
     cursor: pointer;
-    justify-self: end;
-    align-self: center;
-    display: block;
-    grid-area: mail;
+      justify-self: end;
+      align-self: center;
+      display: block;
+      grid-area: mail;
 
-    &:hover {
-      opacity: 0.7;
-    }
+      &:hover {
+        opacity: 0.7;
+      }
 
-    & svg {
-      width: 20px;
-      height: 20px;
-      stroke: $white;
-      fill: transparent;
-    }
+      & svg {
+        width: 20px;
+        height: 20px;
+        fill: transparent;
+      }
   }
 }
 
@@ -231,7 +211,6 @@
   @media (max-width: $tablet-width) {
     list-style: none;
     padding: 0;
-    grid-area: add_m;
     display: flex;
     flex-direction: column;
     margin-top: 25px;
@@ -245,4 +224,70 @@
 .page-header__add-menu-item-link {
   color: $white;
   opacity: 0.75;
+}
+
+// mobile menu items enable
+.page-header--closed {
+  @media (max-width: $tablet-width) {
+    grid-template-areas:  "toggle logo mail";
+    grid-template-rows: 126px;
+
+    & .page-header__menu-toggle svg {
+        stroke: $main-black;
+    }
+
+    & .page-header__mail-link svg {
+      stroke: $black;
+    }
+
+    & .page-header__navigation,
+      .page-header__search,
+      .page-header__login-cart-list {
+      display: none;
+    }
+  }
+}
+
+.page-header--opened {
+  @media (max-width: $tablet-width) {
+    grid-template-areas:  "toggle logo mail"
+                          "search search search"
+                          "nav nav nav"
+                          "login login login";
+    grid-template-rows: repeat(5, min-content);
+    padding: 30px 45px 80px;
+    background-color: $main-brown;
+
+    & .page-header__menu-toggle svg {
+      stroke: $white;
+    }
+
+    & .page-header__logo-link {
+      & svg {
+        fill: $white;
+      }
+    }
+
+    & .page-header__mail-link svg {
+      stroke: $white;
+    }
+
+    & .page-header__login-cart-list {
+      grid-area: login;
+      margin: 50px 0 0;
+      justify-self: start;
+
+      & li {
+        margin: 0;
+      }
+    }
+
+    & .page-header__login-cart-item-link {
+      color: $white;
+
+      &--cart {
+        display: none;
+      }
+    }
+  }
 }
