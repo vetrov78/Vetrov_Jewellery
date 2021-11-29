@@ -6,6 +6,8 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Стартовый шаблон</title>
   <link rel="stylesheet" href="css/style.min.css">
+  <link rel="preload" href="fonts/cormorantgaramond-bold.woff2" as="font" type="font/woff2" crossorigin="">
+  <link rel="preload" href="fonts/poppins-regular.woff2" as="font" type="font/woff2" crossorigin="">
 </head>
 
 <body class="page__body">
@@ -89,6 +91,62 @@
       <h2>PERFECTION</h2>
       <p>made to be yours</p>
     </div>
+
+    <section class="shop">
+      <div class="shop__arrow-container">
+        <svg class="shop__arrow shop__arrow--left">
+          <use xlink:href="/img/sprite.svg#arrow-left"></use>
+        </svg>
+        <svg class="shop__arrow shop__arrow--right">
+          <use xlink:href="/img/sprite.svg#arrow-right"></use>
+        </svg>
+      </div>
+      <h1>New In</h1>
+      <a class="shop__catalog-link" href="catalog.html">Shop Now</a>
+      <ul class="shop__product-list">
+        <li class="shop__product-item">
+          <picture>
+            <source type="image/webp" srcset="./img/purple-gemstone-necklace-desktop@1x.webp 1x, ./img/purple-gemstone-necklace-desktop@2x.webp 2x">
+            <!-- 1x: 270x284 ; 2x: 540x568 -->
+            <img width="270" height="284" src="./img/purple-gemstone-necklace-desktop@1x.jpg" srcset="./img/purple-gemstone-necklace-desktop@2x.jpg 2x" alt="Цепочка с амметистом">
+          </picture>
+          <h2>Necklace with amethyst</h2>
+          <p>$ 145</p>
+        </li>
+        <li class="shop__product-item">
+          <picture>
+            <source type="image/webp" srcset="./img/layered-choker-necklace-desktop@1x.webp 1x, ./img/layered-choker-necklace-desktop@2x.webp 2x">
+            <!-- 1x: 270x284 ; 2x: 540x568 -->
+            <img width="270" height="284" src="./img/layered-choker-necklace-desktop.jpg" srcset="./img/layered-choker-necklace-desktop@2x.jpg 2x" alt="Короткое ожерелье">
+          </picture>
+          <h2>Layered сhoker</h2>
+          <p>$ 115</p>
+        </li>
+        <li class="shop__product-item">
+          <picture>
+            <source type="image/webp" srcset="./img/dainty-gold-necklace-desktop@1x.webp 1x, ./img/dainty-gold-necklace-desktop@2x.webp 2x">
+            <!-- 1x: 270x284 ; 2x: 540x568 -->
+            <img width="270" height="284" src="./img/dainty-gold-necklace-desktop@1x.jpg" srcset="./img/dainty-gold-necklace-desktop@2x.jpg 2x" alt="Золотая цепочка">
+          </picture>
+          <h2>Gold chain</h2>
+          <p>$ 215</p>
+        </li>
+        <li class="shop__product-item">
+          <picture>
+            <source type="image/webp" srcset="./img/galaxy-earrings-desktop@1x.webp 1x, ./img/galaxy-earrings-desktop@2x.webp 2x">
+            <!-- 1x: 270x284 ; 2x: 540x568 -->
+            <img width="270" height="284" src="./img/galaxy-earrings-desktop@1x.jpg" srcset="./img/galaxy-earrings-desktop@2x.jpg 2x" alt="Серьги с синим камнем">
+          </picture>
+          <h2>Galaxy earrings</h2>
+          <p>$ 95</p>
+        </li>
+      </ul>
+      <ul class="shop__page-number-list">
+        <li class="shop__page-number-item shop__page-number-item--current" tabindex="0">1</li>
+        <li class="shop__page-number-item" tabindex="0">2</li>
+        <li class="shop__page-number-item" tabindex="0">3</li>
+      </ul>
+    </section>
   </main>
 
   <footer class="page-footer">

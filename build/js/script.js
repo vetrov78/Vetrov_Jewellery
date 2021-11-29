@@ -5,6 +5,7 @@
   $('.page-header').removeClass('page-header--opened');
   $('.page-header__navigation').css('height', '100%');
 
+  // MOBILE MENU OPEN-CLOSE
   $('.page-header__menu-toggle').on('click', function () {
     if (document.body.clientWidth < 1024) {
       $('body').toggleClass('body-no-scroll');
@@ -20,7 +21,7 @@
     }
   });
 
-  // LOGIN POPUP OPEN
+  // LOGIN POPUP OPEN-CLOSE
   var templateFrag = $('#login-popup').prop('content');
   var loginWindow = $(templateFrag)
       .find('.login-popup__container')
@@ -82,5 +83,7 @@
     $(document).on('keydown', onEscRemoveModal);
     closeButton.on('click', removeModal);
   });
+
+  $('.shop__page-number-item')
 
 })(jQuery);

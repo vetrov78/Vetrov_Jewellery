@@ -1,0 +1,94 @@
+.shop {
+  border: 1px solid rebeccapurple;
+
+  margin: 100px 5% 0;
+  padding: 30px;
+  box-sizing: border-box;
+  text-align: center;
+}
+
+.shop h1 {
+  margin: 0;
+  font-family: "CormorantGaramond", "Times", serif;
+  font-weight: 700;
+  font-size: 34px;
+  line-height: 44px;
+}
+
+.shop__arrow-container {
+  position: relative;
+  width: 100%;
+}
+
+.shop__arrow {
+  position: absolute;
+  cursor: pointer;
+  width: 30px;
+  height: 11px;
+  stroke: $main-brown;
+
+  &--left {
+    left: 0;
+    top: 30px;
+  }
+
+  &--right {
+    top: 30px;
+    right: 0;
+  }
+
+  &:hover {
+    stroke: $main-black;
+  }
+}
+
+.shop__catalog-link {
+  color: $main-black;
+  font-weight: 500;
+  border-bottom: 1px solid $main-brown;
+
+  &:hover {
+    color: $main-brown;
+  }
+}
+
+.shop__product-list {
+  padding: 0;
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+}
+
+.shop__product-item {
+  & h2 {
+    font-weight: 500;
+    font-size: 16px;
+  }
+
+  & p {
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 18px;
+  }
+}
+
+.shop__page-number-list {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+}
+
+.shop__page-number-item {
+  cursor: pointer;
+  font-weight: 500;
+  color: $input-placeholder;
+
+  &:not(:first-child) {
+    margin-left: 15px;
+  }
+
+  &--current {
+    color: $main-black;
+  }
+}
