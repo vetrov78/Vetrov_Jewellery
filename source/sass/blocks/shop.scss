@@ -60,15 +60,21 @@
 }
 
 .shop__product-item {
-  & h2 {
-    font-weight: 500;
-    font-size: 16px;
-  }
+  display: none;
 
-  & p {
-    font-weight: 700;
-    font-size: 14px;
-    line-height: 18px;
+  &--current {
+    display: block;
+
+    & h2 {
+      font-weight: 500;
+      font-size: 16px;
+    }
+
+    & p {
+      font-weight: 700;
+      font-size: 14px;
+      line-height: 18px;
+    }
   }
 }
 

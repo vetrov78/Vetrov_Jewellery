@@ -46,17 +46,7 @@
       }
     }
 
-    // CLOSE BY OVERLAY CLICK
-    window.addEventListener('click', function (evt) {
-      var isPathContainForm = function (x) {
-        return (typeof x.className === 'string') ? x.className.includes('login-popup__container') || x.id.includes('login-button') : false;
-      };
-      if (!evt.composedPath().some(isPathContainForm)) {
-        removeModal(evt);
-      }
-    });
-
-    // CLOSE BY ESC CLICK
+    // CLOSE POPUP
     var onEscRemoveModal = function (evt) {
       if (evt.key === 'Escape' || evt.key === 'Esc') {
         removeModal(evt);
@@ -80,10 +70,48 @@
       $(document).off('keydown', onEscRemoveModal);
       closeButton.off('click', removeModal);
     };
+    // CLOSE BY OVERLAY CLICK
+    window.addEventListener('click', function (evt) {
+      var isPathContainForm = function (x) {
+        return (typeof x.className === 'string') ? x.className.includes('login-popup__container') || x.id.includes('login-button') : false;
+      };
+      if (!evt.composedPath().some(isPathContainForm)) {
+        removeModal(evt);
+      }
+    });
+    // CLOSE BY ESC CLICK
     $(document).on('keydown', onEscRemoveModal);
     closeButton.on('click', removeModal);
   });
 
-  $('.shop__page-number-item')
+  // SLIDER
+  const DESKTOP_ITEMS = 4;
+
+  var currentPage = 1;
+
+  var getPagNumber = function (element) {
+    return Number(element.innerText);
+  };
+
+  var changeCurrentPage = function (pageNumber) {
+    $('.shop__product-item--current').removeClass('shop__product-item--current');
+    var startItemNumber = DESKTOP_ITEMS * (pageNumber - 1);
+    var finishItemNumber = DESKTOP_ITEMS * pageNumber;
+    $('.shop__product-item').slice(startItemNumber, finishItemNumber).addClass('shop__product-item--current');
+    currentPage = pageNumber;
+    $('.shop__page-number-item--current').removeClass('shop__page-number-item--current');
+    $('.shop__page-number-item').slice(pageNumber-1, pageNumber).addClass('shop__page-number-item--current');
+  }
+
+  $('.shop__arrow shop__arrow--left').on('click', function () {
+
+  });
+
+  $('.shop__page-number-item').on('click', function (evt) {
+    var pageNumber = getPagNumber(evt.target);
+    if (pageNumber !== currentPage) {
+      changeCurrentPage(pageNumber);
+    }
+  });
 
 })(jQuery);
