@@ -138,4 +138,9 @@
     }
   });
 
+  // FAQ JS
+  $('.faq__item-arrow').on('click', function (evt) {
+    var thiscontentBlock = $(this).parent().find('.faq__item p');
+  })
+
 })(jQuery);

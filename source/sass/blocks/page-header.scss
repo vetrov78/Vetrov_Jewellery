@@ -1,5 +1,9 @@
 .page-header {
   padding: 0 98px;
+  box-sizing: border-box;
+  max-width: 1366px;
+  width: 100%;
+  margin: auto;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: 115px 61px;
@@ -94,6 +98,7 @@
     width: 66px;
     height: 66px;
     fill: $main-brown;
+    fill-rule: evenodd;
   }
 
   @media (max-width: $tablet-width) {

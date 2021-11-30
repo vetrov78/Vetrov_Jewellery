@@ -1,10 +1,14 @@
 .page-footer {
   background-color: $black;
   color: $white;
+  display: flex;
+}
+.page-footer__grid-container {
   display: grid;
-  grid-template-columns: minmax(500px, auto) repeat(3, min-content);
-  padding: 90px 98px;
-
+  grid-template-columns: minmax(340px, 588px) minmax(177px, 244px) minmax(177px, 233px) 120px;
+  gap: 5px;
+  padding: 90px 7%;
+  margin: auto;
   @media (max-width: $tablet-width) {
     grid-template-columns: repeat(3, auto);
     padding: 60px 150px 60px 45px;
@@ -45,6 +49,7 @@
 
 .page-footer__email-input-block {
   position: relative;
+  max-width: 500px;
   display: flex;
   justify-content: space-between;
   margin-top: 45px;
@@ -98,13 +103,12 @@
   list-style: none;
 
   &--1 {
-    margin-left: 90px;
     grid-column-start: 2;
     grid-column-end: 3;
   }
 
   &--2 {
-    margin-left: 66px;
+
   }
 
   & li:not(:first-child) {
@@ -141,7 +145,7 @@
 }
 
 .page-footer__socials-list {
-  margin: 10px 0 0 87px;
+  margin-top: 10px;
   padding: 0;
   list-style: none;
 

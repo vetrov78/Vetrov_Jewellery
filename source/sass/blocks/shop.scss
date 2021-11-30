@@ -1,6 +1,7 @@
 .shop {
-  margin: 100px 5% 0;
-  padding: 30px;
+  max-width: 1170px;
+  margin: 100px auto 0;
+  padding: 30px 30px 0;
   box-sizing: border-box;
   text-align: center;
 
@@ -14,7 +15,7 @@
   }
 }
 
-.shop h1 {
+.shop h2 {
   margin: 0;
   font-family: "CormorantGaramond", "Times", serif;
   font-weight: 700;
@@ -67,7 +68,8 @@
   padding: 0;
   list-style: none;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
+  gap: 30px;
 
   @media (max-width: $tablet-width) {
     margin-top: 50px;
@@ -103,9 +105,8 @@
   }
 
   @media (max-width: $tablet-width) {
-    width: 324px;
-
     & img {
+      width: 100%;
       height: 340px;
     }
   }
