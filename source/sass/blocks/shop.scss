@@ -1,10 +1,17 @@
 .shop {
-  border: 1px solid rebeccapurple;
-
   margin: 100px 5% 0;
   padding: 30px;
   box-sizing: border-box;
   text-align: center;
+
+  @media (max-width: $tablet-width) {
+    margin: 50px 2% 0;
+  }
+
+  @media (max-width: $mobile-width) {
+    margin: 65px 0 0;
+    padding: 15px;
+  }
 }
 
 .shop h1 {
@@ -43,6 +50,9 @@
 }
 
 .shop__catalog-link {
+  display: inline-block;
+  vertical-align: middle;
+  margin-top: 35px;
   color: $main-black;
   font-weight: 500;
   border-bottom: 1px solid $main-brown;
@@ -53,10 +63,19 @@
 }
 
 .shop__product-list {
+  margin-top: 60px;
   padding: 0;
   list-style: none;
   display: flex;
   justify-content: space-between;
+
+  @media (max-width: $tablet-width) {
+    margin-top: 50px;
+  }
+
+  @media (max-width: $mobile-width) {
+    margin-top: 40px;
+  }
 }
 
 .shop__product-item {
@@ -76,9 +95,32 @@
       line-height: 18px;
     }
   }
+
+  & img {
+    display: block;
+    width: 270px;
+    height: 284px;
+  }
+
+  @media (max-width: $tablet-width) {
+    width: 324px;
+
+    & img {
+      height: 340px;
+    }
+  }
+
+  @media (max-width: $mobile-width) {
+    width: 130px;
+
+    & img {
+      height: 136px;
+    }
+  }
 }
 
 .shop__page-number-list {
+  margin: 0;
   list-style: none;
   padding: 0;
   display: flex;
@@ -97,4 +139,8 @@
   &--current {
     color: $main-black;
   }
+}
+
+.shop__mobile-pages-pagination {
+  font-weight: 500;
 }

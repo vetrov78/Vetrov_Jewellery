@@ -7,6 +7,13 @@
 
   @media (max-width: $tablet-width) {
     grid-template-columns: repeat(3, auto);
+    padding: 60px 150px 60px 45px;
+  }
+
+  @media (max-width: $mobile-width) {
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(4, auto);
+    padding: 60px 15px;
   }
 }
 
@@ -28,6 +35,11 @@
   @media (max-width: $tablet-width) {
     grid-column-start: 1;
     grid-column-end: 4;
+  }
+
+  @media (max-width: $mobile-width) {
+    grid-column-start: 1;
+    grid-column-end: 2;
   }
 }
 
@@ -100,9 +112,18 @@
   }
 
   @media (max-width: $tablet-width) {
+    margin-top: 50px;
+
     &--1 {
       grid-column-start: 1;
       grid-column-end: 2;
+      margin-left: 0;
+    }
+  }
+
+  @media (max-width: $mobile-width) {
+    &--2 {
+      margin-left: 0;
     }
   }
 }
@@ -127,6 +148,20 @@
   & li:not(:first-child) {
     margin-top: 20px;
   }
+
+  @media (max-width: $tablet-width) {
+    margin-top: 50px;
+  }
+
+  @media (max-width: $mobile-width) {
+    display: flex;
+    margin-left: 0;
+
+    & li:not(:first-child) {
+      margin-top: 0;
+      margin-left: 30px;
+    }
+  }
 }
 
 .page-footer__socials-item {
@@ -145,5 +180,16 @@
 
   &:hover {
     opacity: 0.7;
+  }
+
+  @media (max-width: $mobile-width) {
+    & svg {
+      width: 20px;
+      height: 21px;
+    }
+
+    & span {
+      display: none;
+    }
   }
 }
