@@ -101,6 +101,10 @@
     fill-rule: evenodd;
   }
 
+  &:hover {
+    opacity: 0.7;
+  }
+
   @media (max-width: $tablet-width) {
     grid-area: logo;
   }

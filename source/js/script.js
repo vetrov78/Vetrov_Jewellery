@@ -25,7 +25,8 @@
       .find('.login-popup__container')
       .clone();
 
-  $('#login-button').on('click', function () {
+  $('#login-button').on('click', function (evt) {
+    evt.preventDefault();
     $('.page__body').addClass('body-no-scroll');
     $('.page__body').append(loginWindow);
     var closeButton = $('.login-popup__close-button');
