@@ -1,12 +1,42 @@
 .faq {
   margin: 130px auto 0;
-  width: 970px;
+  padding: 0 45px 0;
+  max-width: 1060px;
+
+  @media (max-width: $mobile-width) {
+    padding: 0 15px 0;
+  }
 }
 
 .faq__item-title-container {
   display: flex;
   justify-content: space-between;
   align-items: center;
+
+  & svg {
+    flex-shrink: 0;
+    width: 15px;
+    height: 8px;
+    stroke: $main-brown;
+  }
+
+  &:hover {
+    opacity: 0.7;
+  }
+
+  @media (max-width: $tablet-width) {
+    & svg {
+      width: 23px;
+      height: 12px;
+    }
+  }
+
+  @media (max-width: $tablet-width) {
+    & svg {
+      width: 20px;
+      height: 10px;
+    }
+  }
 }
 
 .faq h2 {
@@ -38,10 +68,27 @@
 .faq__item {
   border: 1px solid $main-brown;
   border-bottom: none;
-
   padding: 50px;
+
+  &:last-child {
+    border-bottom: 1px solid $main-brown;
+  }
 
   & h3 {
     margin-left: -12px;
+    font-size: 18px;
+    line-height: 23px;
+  }
+
+  @media (max-width: $tablet-width) {
+    & h3 {
+      margin: 0;
+      font-size: 16px;
+    line-height: 22px;
+    }
+  }
+
+  @media (max-width: $mobile-width) {
+    padding: 25px
   }
 }

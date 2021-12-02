@@ -139,8 +139,17 @@
   });
 
   // FAQ JS
-  $('.faq__item-arrow').on('click', function (evt) {
-    var thiscontentBlock = $(this).parent().find('.faq__item p');
+  $('.faq__item-title-container').on('click', function (evt) {
+    var thiscontentBlock = $(this).parent().find('p');
+    if (thiscontentBlock.hasClass('visually-hidden')) {
+      thiscontentBlock.removeClass('visually-hidden');
+      $(this).find('.faq__item-arrow--up').removeClass('visually-hidden');
+      $(this).find('.faq__item-arrow--down').addClass('visually-hidden');
+    } else {
+      thiscontentBlock.addClass('visually-hidden');
+      $(this).find('.faq__item-arrow--up').addClass('visually-hidden');
+      $(this).find('.faq__item-arrow--down').removeClass('visually-hidden');
+    }
   })
 
 })(jQuery);

@@ -1,0 +1,20 @@
+.instagram-block {
+  border: 1px solid blue;
+
+  max-width: 1230px;
+  margin: 100px auto 0;
+  padding: 30px;
+  box-sizing: border-box;
+  text-align: center;
+
+
+  @media (max-width: $tablet-width) {
+    margin-top: 80px;
+    padding: 45px;
+  }
+
+  @media (max-width: $mobile-width) {
+    margin-top: 70px;
+    padding: 15px;
+  }
+}
