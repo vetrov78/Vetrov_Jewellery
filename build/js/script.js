@@ -155,4 +155,18 @@
     }
   })
 
+  // FILTER ARROWS JS
+  $('.filter__category-title-container').on('click', function (evt) {
+    var thiscontentBlock = $(this).parent().find('.filter__category-values-list');
+    if (thiscontentBlock.hasClass('visually-hidden')) {
+      thiscontentBlock.removeClass('visually-hidden');
+      $(this).find('.item-arrow--up').removeClass('visually-hidden');
+      $(this).find('.item-arrow--down').addClass('visually-hidden');
+    } else {
+      thiscontentBlock.addClass('visually-hidden');
+      $(this).find('.item-arrow--up').addClass('visually-hidden');
+      $(this).find('.item-arrow--down').removeClass('visually-hidden');
+    }
+  })
+
 })(jQuery);
