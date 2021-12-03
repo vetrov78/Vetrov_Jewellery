@@ -13,75 +13,72 @@
   <header class="page-header page-header--opened no-js">
     <h1 class="visually-hidden">Page-header</h1>
 
+    <label class="page-header__search">
+      <h2 class="visually-hidden">search block</h2>
+      <svg>
+        <use xlink:href="/img/sprite.svg#search"></use>
+      </svg>
+      <input type="text" placeholder="Type here to search" aria-label="Type here to search">
+    </label>
 
-      <label class="page-header__search">
-        <h2 class="visually-hidden">search block</h2>
-        <svg>
-          <use xlink:href="/img/sprite.svg#search"></use>
-        </svg>
-        <input type="text" placeholder="Type here to search" aria-label="Type here to search">
-      </label>
+    <a class="page-header__logo-link" href="./index.html">
+      <svg>
+        <use xlink:href="/img/sprite.svg#logo"></use>
+      </svg>
+    </a>
 
-      <a class="page-header__logo-link" href="./index.html">
-        <svg>
-          <use xlink:href="/img/sprite.svg#logo"></use>
-        </svg>
-      </a>
+    <ul class="page-header__login-cart-list">
+      <li>
+        <a class="page-header__login-cart-item-link page-header__login-cart-item-link--login" id="login-button" tabindex="0" href="./login.html">Login</a>
+      </li>
+      <li>
+        <a class="page-header__login-cart-item-link page-header__login-cart-item-link--cart" href="#">Cart 0</a>
+      </li>
+    </ul>
 
-      <ul class="page-header__login-cart-list">
+    <div class="page-header__menu-toggle" tabindex="0">
+      <svg>
+        <use xlink:href="/img/sprite.svg#burger"></use>
+      </svg>
+    </div>
+
+    <a class="page-header__mail-link" href="#">
+      <svg>
+        <use xlink:href="/img/sprite.svg#mail"></use>
+      </svg>
+    </a>
+
+    <nav class="page-header__navigation">
+      <ul class="page-header__menu-list">
         <li>
-          <a class="page-header__login-cart-item-link page-header__login-cart-item-link--login" id="login-button" tabindex="0" href="./login.html">Login</a>
+          <a class="page-header__menu-item-link" href="#">What’s new</a>
         </li>
         <li>
-          <a class="page-header__login-cart-item-link page-header__login-cart-item-link--cart" href="#">Cart 0</a>
+          <a class="page-header__menu-item-link" href="#">Chokers</a>
+        </li>
+        <li>
+          <a class="page-header__menu-item-link" href="#">Necklaces</a>
+        </li>
+        <li>
+          <a class="page-header__menu-item-link" href="#">Rings</a>
+        </li>
+        <li>
+          <a class="page-header__menu-item-link" href="#">Earrings</a>
+        </li>
+
+      </ul>
+      <ul class="page-header__add-menu-list">
+        <li>
+          <a class="page-header__add-menu-item-link" href="#">About CH</a>
+        </li>
+        <li>
+          <a class="page-header__add-menu-item-link" href="#">Stores & Hours</a>
+        </li>
+        <li>
+          <a class="page-header__add-menu-item-link" href="#">Contact Us</a>
         </li>
       </ul>
-
-      <div class="page-header__menu-toggle" tabindex="0">
-        <svg>
-          <use xlink:href="/img/sprite.svg#burger"></use>
-        </svg>
-      </div>
-
-      <a class="page-header__mail-link" href="#">
-        <svg>
-          <use xlink:href="/img/sprite.svg#mail"></use>
-        </svg>
-      </a>
-
-      <nav class="page-header__navigation">
-        <ul class="page-header__menu-list">
-          <li>
-            <a class="page-header__menu-item-link" href="#">What’s new</a>
-          </li>
-          <li>
-            <a class="page-header__menu-item-link" href="#">Chokers</a>
-          </li>
-          <li>
-            <a class="page-header__menu-item-link" href="#">Necklaces</a>
-          </li>
-          <li>
-            <a class="page-header__menu-item-link" href="#">Rings</a>
-          </li>
-          <li>
-            <a class="page-header__menu-item-link" href="#">Earrings</a>
-          </li>
-
-        </ul>
-        <ul class="page-header__add-menu-list">
-          <li>
-            <a class="page-header__add-menu-item-link" href="#">About CH</a>
-          </li>
-          <li>
-            <a class="page-header__add-menu-item-link" href="#">Stores & Hours</a>
-          </li>
-          <li>
-            <a class="page-header__add-menu-item-link" href="#">Contact Us</a>
-          </li>
-        </ul>
-      </nav>
-
-    
+    </nav>
   </header>
 
   <main class="page-main">
@@ -95,7 +92,8 @@
     <div class="page-main__catalog-container">
       <h2 class="visually-hidden">Catalog content</h2>
       <section class="filter">
-        <form class="filter__form" action="POST">
+        <a class="filter__button filter__button--link" id="filter-button" href="./filter.html">Filter</a>
+        <form class="filter__form filter__form--catalog" action="POST">
           <ul class="filter__category-list">
             <li class="filter__category-item">
               <div class="filter__category-title-container">
@@ -129,14 +127,14 @@
             <li class="filter__category-item">
               <div class="filter__category-title-container">
                 <h3>Material</h3>
-                <svg class="item-arrow item-arrow--up">
+                <svg class="item-arrow item-arrow--up visually-hidden">
                   <use xlink:href="/img/sprite.svg#arrow-up"></use>
                 </svg>
-                <svg class="item-arrow item-arrow--down visually-hidden">
+                <svg class="item-arrow item-arrow--down">
                   <use xlink:href="/img/sprite.svg#arrow-down"></use>
                 </svg>
               </div>
-              <ul class="filter__category-values-list">
+              <ul class="filter__category-values-list  visually-hidden">
                 <li class="filter__category-value-item">
                   <input type="checkbox" id="gold" name="gold" checked="" aria-label="">
                   <label for="gold">Gold</label>
@@ -150,14 +148,14 @@
             <li class="filter__category-item">
               <div class="filter__category-title-container">
                 <h3>Collection</h3>
-                <svg class="item-arrow item-arrow--up">
+                <svg class="item-arrow item-arrow--up visually-hidden">
                   <use xlink:href="/img/sprite.svg#arrow-up"></use>
                 </svg>
-                <svg class="item-arrow item-arrow--down visually-hidden">
+                <svg class="item-arrow item-arrow--down">
                   <use xlink:href="/img/sprite.svg#arrow-down"></use>
                 </svg>
               </div>
-              <ul class="filter__category-values-list">
+              <ul class="filter__category-values-list visually-hidden">
                 <li class="filter__category-value-item">
                   <input type="checkbox" id="pink-flamingo_collection" name="pink-flamingo_collection" aria-label="">
                   <label for="pink-flamingo_collection">Pink flamingo</label>
@@ -187,8 +185,8 @@
               </div>
             </li>
           </ul>
-          <button class="filter__apply-button" type="submit" id="apply-button">Apply</button>
-          <button class="filter__clear-button" type="reset" id="clear-button">Clear All</button>
+          <button class="filter__button filter__button--apply" type="submit" id="apply-button">Apply</button>
+          <button class="filter__button filter__button--clear" type="reset" id="clear-button">Clear All</button>
         </form>
       </section>
 
@@ -196,19 +194,130 @@
         <ul class="shop__list">
           <li class="shop__item">
             <picture>
+              <source type="image/webp" srcset="./img/double-pearl-earrings-desktop@1x.webp 1x, ./img/double-pearl-earrings-desktop@2x.webp 2x">
+              <!-- 1x: 270x272 ; 2x: 540x544 -->
+              <img width="270" height="272" src="./img/double-pearl-earrings-desktop@1x.jpg" srcset="./img/double-pearl-earrings-desktop@2x.jpg 2x" alt="">
+            </picture>
+            <h2>Double pearl earrings </h2>
+            <p>$ 115</p>
+          </li>
+          <li class="shop__item">
+            <picture>
+              <source type="image/webp" srcset="./img/black-choker-gold-bead-desktop@1x.webp 1x, ./img/black-choker-gold-bead-desktop@2x.webp 2x">
+              <!-- 1x: 270x272 ; 2x: 540x544 -->
+              <img width="270" height="272" src="./img/black-choker-gold-bead-desktop@1x.jpg" srcset="./img/black-choker-gold-bead-desktop@2x.jpg 2x" alt="">
+            </picture>
+            <h2>Choker with gold bead</h2>
+            <p>$ 55</p>
+          </li>
+          <li class="shop__item">
+            <picture>
+              <source type="image/webp" srcset="./img/gold-layered-necklace-desktop@1x.webp 1x, ./img/gold-layered-necklace-desktop@2x.webp 2x">
+              <!-- 1x: 270x272 ; 2x: 540x544 -->
+              <img width="270" height="272" src="./img/gold-layered-necklace-desktop@1x.jpg" srcset="./img/gold-layered-necklace-desktop@2x.jpg 2x" alt="">
+            </picture>
+            <h2>Gold layered necklace</h2>
+            <p>$ 155</p>
+          </li>
+          <li class="shop__item">
+            <picture>
+              <source type="image/webp" srcset="./img/blue-gemstone-pendant-desktop@1x.webp 1x, ./img/blue-gemstone-pendant-desktop@2x.webp 2x">
+              <!-- 1x: 270x272 ; 2x: 540x544 -->
+              <img width="270" height="272" src="./img/blue-gemstone-pendant-desktop@1x.jpg" srcset="./img/blue-gemstone-pendant-desktop@2x.jpg 2x" alt="">
+            </picture>
+            <h2>Blue gemstone pendant</h2>
+            <p>$ 105</p>
+          </li>
+          <li class="shop__item">
+            <picture>
+              <source type="image/webp" srcset="./img/boho-earrings-desktop@1x.webp 1x, ./img/boho-earrings-desktop@2x.webp 2x">
+              <!-- 1x: 270x272 ; 2x: 540x544 -->
+              <img width="270" height="272" src="./img/boho-earrings-desktop@1x.jpg" srcset="./img/boho-earrings-desktop@2x.jpg 2x" alt="">
+            </picture>
+            <h2>Boho earrings</h2>
+            <p>$ 75</p>
+          </li>
+          <li class="shop__item">
+            <picture>
+              <source type="image/webp" srcset="./img/bird-necklace-desktop@1x.webp 1x, ./img/bird-necklace-desktop@2x.webp 2x">
+              <!-- 1x: 270x272 ; 2x: 540x544 -->
+              <img width="270" height="272" src="./img/bird-necklace-desktop@1x.jpg" srcset="./img/bird-necklace-desktop@2x.jpg 2x" alt="">
+            </picture>
+            <h2>Gold bird necklace</h2>
+            <p>$ 135</p>
+          </li>
+          <li class="shop__item">
+            <picture>
+              <source type="image/webp" srcset="./img/black-leather-choker-necklace-desktop@1x.webp 1x, ./img/black-leather-choker-necklace-desktop@2x.webp 2x">
+              <!-- 1x: 270x272 ; 2x: 540x544 -->
+              <img width="270" height="272" src="./img/black-leather-choker-necklace-desktop@1x.jpg" srcset="./img/black-leather-choker-necklace-desktop@2x.jpg 2x" alt="">
+            </picture>
+            <h2>Black leather choker</h2>
+            <p>$ 85</p>
+          </li>
+          <li class="shop__item">
+            <picture>
               <source type="image/webp" srcset="./img/purple-gemstone-necklace-desktop@1x.webp 1x, ./img/purple-gemstone-necklace-desktop@2x.webp 2x">
               <!-- 1x: 270x272 ; 2x: 540x544 -->
-              <img width="270" height="284" src="./img/purple-gemstone-necklace-desktop@1x.jpg" srcset="./img/purple-gemstone-necklace-desktop@2x.jpg 2x" alt="Цепочка с амметистом">
+              <img width="270" height="272" src="./img/purple-gemstone-necklace-desktop@1x.jpg" srcset="./img/purple-gemstone-necklace-desktop@2x.jpg 2x" alt="Цепочка с амметистом">
             </picture>
             <h2>Necklace with amethyst</h2>
             <p>$ 145</p>
           </li>
+          <li class="shop__item">
+            <picture>
+              <source type="image/webp" srcset="./img/elephant-earrings-desktop@1x.webp 1x, ./img/elephant-earrings-desktop@2x.webp 2x">
+              <!-- 1x: 270x272 ; 2x: 540x544 -->
+              <img width="270" height="272" src="./img/elephant-earrings-desktop@1x.jpg" srcset="./img/elephant-earrings-desktop@2x.jpg 2x" alt="">
+            </picture>
+            <h2>Elephant earrings</h2>
+            <p>$ 95</p>
+          </li>
+          <li class="shop__item">
+            <picture>
+              <source type="image/webp" srcset="./img/threader-necklace-closeup-desktop@1x.webp 1x, ./img/threader-necklace-closeup-desktop@2x.webp 2x">
+              <!-- 1x: 270x272 ; 2x: 540x544 -->
+              <img width="270" height="272" src="./img/threader-necklace-closeup-desktop@1x.jpg" srcset="./img/threader-necklace-closeup-desktop@2x.jpg 2x" alt="">
+            </picture>
+            <h2>Threader necklace</h2>
+            <p>$ 115</p>
+          </li>
+          <li class="shop__item">
+            <picture>
+              <source type="image/webp" srcset="./img/origami-crane-necklace-desktop@1x.webp 1x, ./img/origami-crane-necklace-desktop@2x.webp 2x">
+              <!-- 1x: 270x272 ; 2x: 540x544 -->
+              <img width="270" height="272" src="./img/origami-crane-necklace-desktop@1x.jpg" srcset="./img/origami-crane-necklace-desktop@2x.jpg 2x" alt="">
+            </picture>
+            <h2>Origami crane necklace</h2>
+            <p>$ 105</p>
+          </li>
+          <li class="shop__item">
+            <picture>
+              <source type="image/webp" srcset="./img/marble-earrings-desktop@1x.webp 1x, ./img/marble-earrings-desktop@2x.webp 2x">
+              <!-- 1x: 270x272 ; 2x: 540x544 -->
+              <img width="270" height="272" src="./img/marble-earrings-desktop@1x.jpg" srcset="./img/marble-earrings-desktop@2x.jpg 2x" alt="">
+            </picture>
+            <h2>Marble earrings</h2>
+            <p>$ 95</p>
+          </li>
         </ul>
+        <div class="shop__bottom-block">
+          <span class="shop__bottom-block-previous">Previous</span>
+          <ul class="shop__pagination-list">
+            <li class="shop__pagination-item">1</li>
+            <li class="shop__pagination-item">2</li>
+            <li class="shop__pagination-item">3</li>
+            <li class="shop__pagination-item">4</li>
+            <li class="shop__pagination-item">5</li>
+            <li class="shop__pagination-item">6</li>
+          </ul>
+          <span class="shop__bottom-block-next">Next</span>
+        </div>
       </section>
     </div>
   </main>
 
-  <footer class="page-footer">
+  <footer class="page-footer page-footer--catalog">
     <div class="page-footer__grid-container">
       <h1 class="visually-hidden">Page-footer</h1>
       <section class="page-footer__promo">
@@ -314,6 +423,106 @@
           <use xlink:href="img/sprite.svg#close-icon"></use>
         </svg>
       </button>
+    </div>
+  </template>
+
+  <template id="filter-popup">
+    <div class="filter__popup-container">
+      <form class="filter__form" action="POST">
+        <ul class="filter__category-list">
+          <li class="filter__category-item">
+            <div class="filter__category-title-container">
+              <h3>Product</h3>
+              <svg class="item-arrow item-arrow--up">
+                <use xlink:href="/img/sprite.svg#arrow-up"></use>
+              </svg>
+              <svg class="item-arrow item-arrow--down visually-hidden">
+                <use xlink:href="/img/sprite.svg#arrow-down"></use>
+              </svg>
+            </div>
+            <ul class="filter__category-values-list">
+              <li class="filter__category-value-item">
+                <input type="checkbox" id="neckplaces" name="neckplaces" checked="" aria-label="">
+                <label for="neckplaces">Necklaces</label>
+              </li>
+              <li class="filter__category-value-item">
+                <input type="checkbox" id="chokers" name="chokers" checked="" aria-label="">
+                <label for="chokers">Chokers</label>
+              </li>
+              <li class="filter__category-value-item">
+                <input type="checkbox" id="rings" name="rings" aria-label="">
+                <label for="rings">Rings</label>
+              </li>
+              <li class="filter__category-value-item">
+                <input type="checkbox" id="earrings" name="earrings" checked="" aria-label="">
+                <label for="earrings">Earrings</label>
+              </li>
+            </ul>
+          </li>
+          <li class="filter__category-item">
+            <div class="filter__category-title-container">
+              <h3>Material</h3>
+              <svg class="item-arrow item-arrow--up visually-hidden">
+                <use xlink:href="/img/sprite.svg#arrow-up"></use>
+              </svg>
+              <svg class="item-arrow item-arrow--down">
+                <use xlink:href="/img/sprite.svg#arrow-down"></use>
+              </svg>
+            </div>
+            <ul class="filter__category-values-list  visually-hidden">
+              <li class="filter__category-value-item">
+                <input type="checkbox" id="gold" name="gold" checked="" aria-label="">
+                <label for="gold">Gold</label>
+              </li>
+              <li class="filter__category-value-item">
+                <input type="checkbox" id="silver" name="silver" checked="" aria-label="">
+                <label for="silver">Silver</label>
+              </li>
+            </ul>
+          </li>
+          <li class="filter__category-item">
+            <div class="filter__category-title-container">
+              <h3>Collection</h3>
+              <svg class="item-arrow item-arrow--up visually-hidden">
+                <use xlink:href="/img/sprite.svg#arrow-up"></use>
+              </svg>
+              <svg class="item-arrow item-arrow--down">
+                <use xlink:href="/img/sprite.svg#arrow-down"></use>
+              </svg>
+            </div>
+            <ul class="filter__category-values-list visually-hidden">
+              <li class="filter__category-value-item">
+                <input type="checkbox" id="pink-flamingo_collection" name="pink-flamingo_collection" aria-label="">
+                <label for="pink-flamingo_collection">Pink flamingo</label>
+              </li>
+              <li class="filter__category-value-item">
+                <input type="checkbox" id="dreams_collection" name="dreams_collection" checked="" aria-label="">
+                <label for="dreams_collection">Dreams</label>
+              </li>
+            </ul>
+          </li>
+          <li class="filter__category-item">
+            <div class="filter__category-title-container">
+              <h3>Price</h3>
+              <svg class="item-arrow item-arrow--up">
+                <use xlink:href="/img/sprite.svg#arrow-up"></use>
+              </svg>
+              <svg class="item-arrow item-arrow--down visually-hidden">
+                <use xlink:href="/img/sprite.svg#arrow-down"></use>
+              </svg>
+            </div>
+            <div class="filter__category-values-list filter__category-values-list--prices">
+              <div class="filter__price-range-line"></div>
+              <div class="filter__price-values">
+                <span class="filter__price-value filter__price-value--left">$ 55</span>
+                <span class="filter__price-value filter__price-value--right">$ 155</span>
+              </div>
+            </div>
+          </li>
+        </ul>
+        <button class="filter__button filter__button--apply" type="submit" id="apply-button">Apply</button>
+        <button class="filter__button filter__button--clear" type="reset" id="clear-button">Clear All</button>
+      </form>
     </div>
   </template>
 

@@ -1,8 +1,23 @@
 .page-footer {
+  position: relative;
   background-color: $black;
   color: $white;
   display: flex;
+
+  &--catalog::before {
+    position: absolute;
+    content: "";
+    top: -132px;
+    width: 100%;
+    height: 1px;
+    background-color: $light-grey;
+
+    @media (max-width: $tablet-width) {
+      display: none;
+    }
+  }
 }
+
 .page-footer__grid-container {
   display: grid;
   grid-template-columns: minmax(340px, 588px) minmax(177px, 244px) minmax(177px, 233px) 120px;

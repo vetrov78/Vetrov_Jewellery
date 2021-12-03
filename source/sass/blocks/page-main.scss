@@ -2,6 +2,11 @@
   max-width: 1366px;
   width: 100%;
   margin: auto;
+
+  &--filter-page {
+    padding: 0 45px;
+    box-sizing: border-box;
+  }
 }
 
 .page-main__title-container {
@@ -91,10 +96,15 @@
 }
 
 .page-main__catalog-container {
+  position: relative;
   margin: 30px auto 0;
   padding: 50px;
   box-sizing: border-box;
-  max-width: 1170px;
+  max-width: 1270px;
   display: flex;
   gap: 50px;
+
+  @media (max-width: $tablet-width) {
+    flex-direction: column;
+  }
 }

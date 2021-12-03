@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html class="page" lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Стартовый шаблон</title>
+  <link rel="stylesheet" href="css/style.min.css">
+  <link rel="preload" href="fonts/cormorantgaramond-bold.woff2" as="font" type="font/woff2" crossorigin="">
+  <link rel="preload" href="fonts/poppins-regular.woff2" as="font" type="font/woff2" crossorigin="">
+</head>
+<body class="page__body">
+  <header class="page-header page-header--opened no-js">
+    <h1 class="visually-hidden">Page-header</h1>
+    <a class="page-header__logo-link" href="./index.html">
+      <svg>
+        <use xlink:href="/img/sprite.svg#logo"></use>
+      </svg>
+    </a>
+  </header>
+
+  <main class="page-main page-main--filter-page">
+    <h1 class="visually-hidden">Filter page</h1>
+
+    <form class="filter__form" action="POST">
+      <ul class="filter__category-list">
+        <li class="filter__category-item">
+          <div class="filter__category-title-container">
+            <h3>Product</h3>
+            <svg class="item-arrow item-arrow--up">
+              <use xlink:href="/img/sprite.svg#arrow-up"></use>
+            </svg>
+            <svg class="item-arrow item-arrow--down visually-hidden">
+              <use xlink:href="/img/sprite.svg#arrow-down"></use>
+            </svg>
+          </div>
+          <ul class="filter__category-values-list">
+            <li class="filter__category-value-item">
+              <input type="checkbox" id="neckplaces" name="neckplaces" checked="" aria-label="">
+              <label for="neckplaces">Necklaces</label>
+            </li>
+            <li class="filter__category-value-item">
+              <input type="checkbox" id="chokers" name="chokers" checked="" aria-label="">
+              <label for="chokers">Chokers</label>
+            </li>
+            <li class="filter__category-value-item">
+              <input type="checkbox" id="rings" name="rings" aria-label="">
+              <label for="rings">Rings</label>
+            </li>
+            <li class="filter__category-value-item">
+              <input type="checkbox" id="earrings" name="earrings" checked="" aria-label="">
+              <label for="earrings">Earrings</label>
+            </li>
+          </ul>
+        </li>
+        <li class="filter__category-item">
+          <div class="filter__category-title-container">
+            <h3>Material</h3>
+            <svg class="item-arrow item-arrow--up">
+              <use xlink:href="/img/sprite.svg#arrow-up"></use>
+            </svg>
+            <svg class="item-arrow item-arrow--down visually-hidden">
+              <use xlink:href="/img/sprite.svg#arrow-down"></use>
+            </svg>
+          </div>
+          <ul class="filter__category-values-list">
+            <li class="filter__category-value-item">
+              <input type="checkbox" id="gold" name="gold" checked="" aria-label="">
+              <label for="gold">Gold</label>
+            </li>
+            <li class="filter__category-value-item">
+              <input type="checkbox" id="silver" name="silver" checked="" aria-label="">
+              <label for="silver">Silver</label>
+            </li>
+          </ul>
+        </li>
+        <li class="filter__category-item">
+          <div class="filter__category-title-container">
+            <h3>Collection</h3>
+            <svg class="item-arrow item-arrow--up">
+              <use xlink:href="/img/sprite.svg#arrow-up"></use>
+            </svg>
+            <svg class="item-arrow item-arrow--down visually-hidden">
+              <use xlink:href="/img/sprite.svg#arrow-down"></use>
+            </svg>
+          </div>
+          <ul class="filter__category-values-list">
+            <li class="filter__category-value-item">
+              <input type="checkbox" id="pink-flamingo_collection" name="pink-flamingo_collection" aria-label="">
+              <label for="pink-flamingo_collection">Pink flamingo</label>
+            </li>
+            <li class="filter__category-value-item">
+              <input type="checkbox" id="dreams_collection" name="dreams_collection" checked="" aria-label="">
+              <label for="dreams_collection">Dreams</label>
+            </li>
+          </ul>
+        </li>
+        <li class="filter__category-item">
+          <div class="filter__category-title-container">
+            <h3>Price</h3>
+            <svg class="item-arrow item-arrow--up">
+              <use xlink:href="/img/sprite.svg#arrow-up"></use>
+            </svg>
+            <svg class="item-arrow item-arrow--down visually-hidden">
+              <use xlink:href="/img/sprite.svg#arrow-down"></use>
+            </svg>
+          </div>
+          <div class="filter__category-values-list filter__category-values-list--prices">
+            <div class="filter__price-range-line"></div>
+            <div class="filter__price-values">
+              <span class="filter__price-value filter__price-value--left">$ 55</span>
+              <span class="filter__price-value filter__price-value--right">$ 155</span>
+            </div>
+          </div>
+        </li>
+      </ul>
+      <button class="filter__button filter__button--apply" type="submit" id="apply-button">Apply</button>
+      <button class="filter__button filter__button--clear" type="reset" id="clear-button">Clear All</button>
+    </form>
+  </main>
+
+  <script src="js/jquery-3.6.0.js"></script>
+  <script src="js/jquery-ui.js"></script>
+  <script src="js/script.js"></script>
+</body>
+</html>
