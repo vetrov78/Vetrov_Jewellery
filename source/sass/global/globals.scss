@@ -1,4 +1,4 @@
-ody {
+body {
   margin: 0;
 }
 
@@ -26,3 +26,15 @@ a {
 .body-no-scroll {
   overflow: hidden;
 }
+
+.item-arrow {
+  cursor: pointer;
+  width: 15px;
+  height: 8px;
+  fill: transparent;
+
+  &:hover {
+    opacity: 0.7;
+  }
+}
+

@@ -41,3 +41,60 @@
               center / cover url("../img/main-promo_tablet@1x.jpg");
   }
 }
+
+.page-main__catalog-title-container {
+  position: relative;
+  height: 261px;
+  background: linear-gradient($image-background, $image-background),
+              center / cover url("../img/annicken-unsplash-desktop@1x.jpg");
+  text-align: center;
+  color: $white;
+  padding: 102px 36px 0;
+  box-sizing: border-box;
+
+  @media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+    background: linear-gradient($image-background, $image-background),
+                center / cover url("../img/annicken-unsplash-desktop@2x.jpg");
+  }
+
+  & h2 {
+    margin: 0;
+    font-family: "CormorantGaramond", "Times", serif;
+    font-weight: 700;
+    font-size: 34px;
+    line-height: 44px;
+    text-transform: uppercase;
+  }
+
+  & p {
+    margin: 20px 0 0;
+    font-family: "CormorantGaramond_italic", "Times", serif;
+    font-size: 22px;
+    line-height: 29px;
+  }
+
+  @media (max-width: $tablet-width) {
+    background: linear-gradient($image-background, $image-background),
+              center / cover url("../img/annicken-unsplash-tablet@1x.jpg");
+
+    @media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+      background: linear-gradient($image-background, $image-background),
+                  center / cover url("../img/annicken-unsplash-tablet@2x.jpg");
+    }
+  }
+
+  @media (max-width: $mobile-width) {
+    & p {
+      line-height: 26px;
+    }
+  }
+}
+
+.page-main__catalog-container {
+  margin: 30px auto 0;
+  padding: 50px;
+  box-sizing: border-box;
+  max-width: 1170px;
+  display: flex;
+  gap: 50px;
+}

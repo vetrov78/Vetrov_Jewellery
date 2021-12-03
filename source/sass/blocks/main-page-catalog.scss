@@ -1,0 +1,156 @@
+.main-page-catalog {
+  max-width: 1170px;
+  margin: 100px auto 0;
+  padding: 30px 30px 0;
+  box-sizing: border-box;
+  text-align: center;
+
+  @media (max-width: $tablet-width) {
+    margin: 50px 2% 0;
+  }
+
+  @media (max-width: $mobile-width) {
+    margin: 65px 0 0;
+    padding: 15px;
+  }
+}
+
+.main-page-catalog h2 {
+  margin: 0;
+  font-family: "CormorantGaramond", "Times", serif;
+  font-weight: 700;
+  font-size: 34px;
+  line-height: 44px;
+}
+
+.main-page-catalog__arrow-container {
+  position: relative;
+  width: 100%;
+}
+
+.main-page-catalog__arrow {
+  position: absolute;
+  cursor: pointer;
+  width: 30px;
+  height: 11px;
+  stroke: $main-brown;
+
+  &--left {
+    left: 0;
+    top: 30px;
+  }
+
+  &--right {
+    top: 30px;
+    right: 0;
+  }
+
+  &:hover {
+    stroke: $main-black;
+  }
+}
+
+.main-page-catalog__catalog-link {
+  display: inline-block;
+  vertical-align: middle;
+  margin-top: 35px;
+  color: $main-black;
+  font-weight: 500;
+  border-bottom: 1px solid $main-brown;
+
+  &:hover {
+    color: $main-brown;
+  }
+}
+
+.main-page-catalog__product-list {
+  margin-top: 60px;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+
+  @media (max-width: $tablet-width) {
+    margin-top: 50px;
+  }
+
+  @media (max-width: $mobile-width) {
+    margin-top: 40px;
+  }
+}
+
+.no-js .main-page-catalog__product-item:nth-child(-n+4) {
+  display: block;
+}
+
+.no-js .main-page-catalog__arrow {
+  display: none;
+}
+
+.main-page-catalog__product-item {
+  display: none;
+  flex-basis: 270px;
+
+  &--current {
+    display: block;
+  }
+
+  & h2 {
+    font-weight: 500;
+    font-size: 16px;
+  }
+
+  & p {
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 18px;
+  }
+
+  & img {
+    display: block;
+    width: 270px;
+    height: 284px;
+  }
+
+  @media (max-width: $tablet-width) {
+    & img {
+      width: 100%;
+      height: 340px;
+    }
+  }
+
+  @media (max-width: $mobile-width) {
+    width: 130px;
+
+    & img {
+      height: 136px;
+    }
+  }
+}
+
+.main-page-catalog__page-number-list {
+  margin: 0;
+  list-style: none;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+}
+
+.main-page-catalog__page-number-item {
+  cursor: pointer;
+  font-weight: 500;
+  color: $input-placeholder;
+
+  &:not(:first-child) {
+    margin-left: 15px;
+  }
+
+  &--current {
+    color: $main-black;
+  }
+}
+
+.main-page-catalog__mobile-pages-pagination {
+  font-weight: 500;
+}
