@@ -7,7 +7,8 @@
   <title>Стартовый шаблон</title>
   <link rel="stylesheet" href="css/style.min.css">
   <link rel="preload" href="fonts/cormorantgaramond-bold.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="preload" href="fonts/poppins-regular.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="fonts/poppins-regular-webfont.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="fonts/poppins-medium-webfont.woff2" as="font" type="font/woff2" crossorigin>
 </head>
 <body class="page__body">
   <header class="page-header page-header--opened no-js">
@@ -455,18 +456,17 @@
     <div class="login-popup__container">
       <div class="login-popup__promo-image"></div>
       <h2>Log In</h2>
-      <form action="POST" action="https://echo.htmlacademy.ru"></form>
+      <form type="POST" action="https://echo.htmlacademy.ru">
         <div class="login-popup__inputs-container">
           <label for="mail">
-            <input type="text" id="mail" aria-label="Your E-mail" placeholder="Your E-mail" required>
+            <input type="text" id="mail" name="mail" aria-label="Your E-mail" placeholder="Your E-mail" required>
           </label>
           <label for="password">
-            <input type="text" id="password" aria-label="Password" placeholder="Password" required>
+            <input type="text" id="password" name="password" aria-label="Password" placeholder="Password" required>
           </label>
           <a class="login-popup__forgot-password-link" href="#">Forgot your password?</a>
         </div>
         <button class="login-popup__submit-button" type="submit">Log In</button>
-        <div></div>
       </form>
       <p class="login-popup__signup-question">Don’t have an account?
         <a href="#">Sign up</a>

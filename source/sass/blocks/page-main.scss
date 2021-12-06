@@ -54,7 +54,7 @@
               center / cover url("../img/annicken-unsplash-desktop@1x.jpg");
   text-align: center;
   color: $white;
-  padding: 102px 36px 0;
+  padding: 93px 36px 0;
   box-sizing: border-box;
 
   @media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
@@ -72,7 +72,7 @@
   }
 
   & p {
-    margin: 20px 0 0;
+    margin: 0;
     font-family: "CormorantGaramond_italic", "Times", serif;
     font-size: 22px;
     line-height: 29px;
@@ -106,5 +106,9 @@
 
   @media (max-width: $tablet-width) {
     flex-direction: column;
+  }
+
+  @media (max-width: $mobile-width) {
+    padding: 15px;
   }
 }

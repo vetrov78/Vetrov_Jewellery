@@ -7,7 +7,8 @@
   <title>Стартовый шаблон</title>
   <link rel="stylesheet" href="css/style.min.css">
   <link rel="preload" href="fonts/cormorantgaramond-bold.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="preload" href="fonts/poppins-regular.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="fonts/poppins-regular-webfont.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="fonts/poppins-medium-webfont.woff2" as="font" type="font/woff2" crossorigin>
 </head>
 <body class="page__body">
   <header class="page-header page-header--opened no-js">
@@ -93,7 +94,7 @@
       <h2 class="visually-hidden">Catalog content</h2>
       <section class="filter">
         <a class="filter__button filter__button--link" id="filter-button" href="./filter.html">Filter</a>
-        <form class="filter__form filter__form--catalog" action="POST" action="https://echo.htmlacademy.ru">
+        <form class="filter__form filter__form--desktop" type="POST" action="https://echo.htmlacademy.ru">
           <ul class="filter__category-list">
             <li class="filter__category-item">
               <div class="filter__category-title-container">
@@ -134,7 +135,7 @@
                   <use xlink:href="/img/sprite.svg#arrow-down"></use>
                 </svg>
               </div>
-              <ul class="filter__category-values-list  visually-hidden">
+              <ul class="filter__category-values-list" style="display: none;">
                 <li class="filter__category-value-item">
                   <input type="checkbox" id="gold" name="gold" checked aria-label="">
                   <label for="gold">Gold</label>
@@ -155,7 +156,7 @@
                   <use xlink:href="/img/sprite.svg#arrow-down"></use>
                 </svg>
               </div>
-              <ul class="filter__category-values-list visually-hidden">
+              <ul class="filter__category-values-list" style="display: none;">
                 <li class="filter__category-value-item">
                   <input type="checkbox" id="pink-flamingo_collection" name="pink-flamingo_collection" aria-label="">
                   <label for="pink-flamingo_collection">Pink flamingo</label>
@@ -309,7 +310,6 @@
             <li class="shop__pagination-item">3</li>
             <li class="shop__pagination-item">4</li>
             <li class="shop__pagination-item">5</li>
-            <li class="shop__pagination-item">6</li>
           </ul>
           <span class="shop__bottom-block-next">Next</span>
         </div>
@@ -402,7 +402,7 @@
     <div class="login-popup__container">
       <div class="login-popup__promo-image"></div>
       <h2>Log In</h2>
-      <form action="POST" action="https://echo.htmlacademy.ru"></form>
+      <form type="POST" action="https://echo.htmlacademy.ru">
         <div class="login-popup__inputs-container">
           <label for="mail">
             <input type="text" id="mail" aria-label="Your E-mail" placeholder="Your E-mail" required>
@@ -413,7 +413,6 @@
           <a class="login-popup__forgot-password-link" href="#">Forgot your password?</a>
         </div>
         <button class="login-popup__submit-button" type="submit">Log In</button>
-        <div></div>
       </form>
       <p class="login-popup__signup-question">Don’t have an account?
         <a href="#">Sign up</a>
@@ -428,7 +427,12 @@
 
   <template id="filter-popup">
     <div class="filter__popup-container">
-      <form class="filter__form" action="POST" action="https://echo.htmlacademy.ru">
+      <button class="filter__popup-close-button">
+        <svg>
+          <use xlink:href="/img/sprite.svg#filter-close"></use>
+        </svg>
+      </button>
+      <form class="filter__form" type="POST" action="https://echo.htmlacademy.ru">
         <ul class="filter__category-list">
           <li class="filter__category-item">
             <div class="filter__category-title-container">
@@ -442,20 +446,20 @@
             </div>
             <ul class="filter__category-values-list">
               <li class="filter__category-value-item">
-                <input type="checkbox" id="neckplaces" name="neckplaces" checked aria-label="">
-                <label for="neckplaces">Necklaces</label>
+                <input type="checkbox" id="neckplaces_popup" name="neckplaces" checked aria-label="">
+                <label for="neckplaces_popup">Necklaces</label>
               </li>
               <li class="filter__category-value-item">
-                <input type="checkbox" id="chokers" name="chokers" checked aria-label="">
-                <label for="chokers">Chokers</label>
+                <input type="checkbox" id="chokers_popup" name="chokers" checked aria-label="">
+                <label for="chokers_popup">Chokers</label>
               </li>
               <li class="filter__category-value-item">
-                <input type="checkbox" id="rings" name="rings" aria-label="">
-                <label for="rings">Rings</label>
+                <input type="checkbox" id="rings_popup" name="rings" aria-label="">
+                <label for="rings_popup">Rings</label>
               </li>
               <li class="filter__category-value-item">
-                <input type="checkbox" id="earrings" name="earrings" checked aria-label="">
-                <label for="earrings">Earrings</label>
+                <input type="checkbox" id="earrings_popup" name="earrings" checked aria-label="">
+                <label for="earrings_popup">Earrings</label>
               </li>
             </ul>
           </li>
@@ -471,12 +475,12 @@
             </div>
             <ul class="filter__category-values-list  visually-hidden">
               <li class="filter__category-value-item">
-                <input type="checkbox" id="gold" name="gold" checked aria-label="">
-                <label for="gold">Gold</label>
+                <input type="checkbox" id="gold_popup" name="gold" checked aria-label="">
+                <label for="gold_popup">Gold</label>
               </li>
               <li class="filter__category-value-item">
-                <input type="checkbox" id="silver" name="silver" checked aria-label="">
-                <label for="silver">Silver</label>
+                <input type="checkbox" id="silver_popup" name="silver" checked aria-label="">
+                <label for="silver_popup">Silver</label>
               </li>
             </ul>
           </li>
@@ -492,12 +496,12 @@
             </div>
             <ul class="filter__category-values-list visually-hidden">
               <li class="filter__category-value-item">
-                <input type="checkbox" id="pink-flamingo_collection" name="pink-flamingo_collection" aria-label="">
-                <label for="pink-flamingo_collection">Pink flamingo</label>
+                <input type="checkbox" id="pink-flamingo_collection_popup" name="pink-flamingo_collection" aria-label="">
+                <label for="pink-flamingo_collection_popup">Pink flamingo</label>
               </li>
               <li class="filter__category-value-item">
-                <input type="checkbox" id="dreams_collection" name="dreams_collection" checked aria-label="">
-                <label for="dreams_collection">Dreams</label>
+                <input type="checkbox" id="dreams_collection_popup" name="dreams_collection" checked aria-label="">
+                <label for="dreams_collection_popup">Dreams</label>
               </li>
             </ul>
           </li>

@@ -4,7 +4,7 @@
   $('.page-main').removeClass('no-js');
   $('.page-header').addClass('page-header--closed');
   $('.page-header').removeClass('page-header--opened');
-  $('.page-header__navigation').css('height', '100%');
+  // $('.page-header__navigation').css('height', '100%');
   $('.filter__button--link').attr('href', '#');
 
   // MOBILE MENU OPEN-CLOSE
@@ -91,17 +91,16 @@
 
   const onFilterTitleClick = function (evt) {
     var thiscontentBlock = $(this).parent().find('.filter__category-values-list');
-    if (thiscontentBlock.hasClass('visually-hidden')) {
-      thiscontentBlock.removeClass('visually-hidden');
+    if (thiscontentBlock.is(':hidden')) {
+      thiscontentBlock.show();
       $(this).find('.item-arrow--up').removeClass('visually-hidden');
       $(this).find('.item-arrow--down').addClass('visually-hidden');
     } else {
-      thiscontentBlock.addClass('visually-hidden');
+      thiscontentBlock.hide();
       $(this).find('.item-arrow--up').addClass('visually-hidden');
       $(this).find('.item-arrow--down').removeClass('visually-hidden');
     }
   }
-
   // FILTER ARROWS JS
   $('.filter__category-title-container').on('click', onFilterTitleClick);
 
@@ -116,7 +115,6 @@
     $('.page__body').append(loginWindow);
     var closeButton = $('.login-popup__close-button');
     $('#popup-name').focus();
-
     // TURN OFF ANOTHER INTERACTIVE ELEMENTS
     var modalNodes = $('.login-popup__container').find(':focusable');
     var focusableNodes = $(':focusable');
@@ -129,8 +127,7 @@
         node.style.outline = 'none';
       }
     }
-
-    // CLOSE POPUP
+    // CLOSE POPUP FUNCTIONS
     var onEscRemoveModal = function (evt) {
       if (evt.key === 'Escape' || evt.key === 'Esc') {
         removeModal(evt);
@@ -149,11 +146,11 @@
         node.style.pointerEvents = 'auto';
         node.style.outline = null;
       }
-
       // REMOVE LISTENERS
       $(document).off('keydown', onEscRemoveModal);
       closeButton.off('click', removeModal);
     };
+    // ADD CLOSE HANDLERS
     // CLOSE BY OVERLAY CLICK
     window.addEventListener('click', function (evt) {
       var isPathContainForm = function (x) {
@@ -163,8 +160,9 @@
         removeModal(evt);
       }
     });
-    // CLOSE BY ESC CLICK
+    // CLOSE BY ESC
     $(document).on('keydown', onEscRemoveModal);
+    // CLOSE BY CLOSE BUTTON CLICK
     closeButton.on('click', removeModal);
   });
 
@@ -178,6 +176,56 @@
     $('.page__body').addClass('body-no-scroll');
     $('.page__body').append(filterWindow);
     $('.filter__category-title-container').on('click', onFilterTitleClick);
-  })
+    $('#neckplace_popup').focus();
+    // TURN OFF ANOTHER INTERACTIVE ELEMENTS
+    var modalNodes = $('.filter__popup-container').find(':focusable');
+    var focusableNodes = $(':focusable');
+    for (var i = 0; i < focusableNodes.length; i++) {
+      var node = focusableNodes[i];
+      if (!modalNodes.is(node)) {
+        node._prevTabindex = node.tabIndex;
+        node.tabIndex = -1;
+        node.style.pointerEvents = 'none';
+        node.style.outline = 'none';
+      }
+    }
+    // CLOSE POPUP FUNCTIONS
+    var onEscRemoveModal = function (evt) {
+      if (evt.key === 'Escape' || evt.key === 'Esc') {
+        removeModal(evt);
+      }
+    };
+    var removeModal = function (evt) {
+      evt.preventDefault();
+      filterWindow.remove();
+      $('.page__body').removeClass('body-no-scroll');
 
+      // RESTORE TABINDEX & POINTER-EVENTS TO AUTO
+      for (i = 0; i < focusableNodes.length; i++) {
+        node = focusableNodes[i];
+        node.tabIndex = node._prevTabindex;
+        node._prevTabindex = null;
+        node.style.pointerEvents = 'auto';
+        node.style.outline = null;
+      }
+      // REMOVE LISTENERS
+      $(document).off('keydown', onEscRemoveModal);
+      closeButton.off('click', removeModal);
+    };
+    var closeButton = $('.filter__popup-close-button');
+    // ADD CLOSE HANDLERS
+    // CLOSE BY OVERLAY CLICK
+    window.addEventListener('click', function (evt) {
+      var isPathContainForm = function (x) {
+        return (typeof x.className === 'string') ? x.className.includes('filter__popup-container') || x.id.includes('filter-button') : false;
+      };
+      if (!evt.composedPath().some(isPathContainForm)) {
+        removeModal(evt);
+      }
+    });
+    // CLOSE BY ESC
+    $(document).on('keydown', onEscRemoveModal);
+    // CLOSE BY CLOSE BUTTON CLICK
+    closeButton.on('click', removeModal);
+  })
 })(jQuery);

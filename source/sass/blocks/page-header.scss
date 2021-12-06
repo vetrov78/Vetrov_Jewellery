@@ -5,6 +5,7 @@
   width: 100%;
   margin: auto;
   display: grid;
+  align-items: center;
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: 115px 61px;
 
@@ -42,7 +43,7 @@
   display: flex;
   align-items: center;
   height: 14px;
-  padding-top: 45px;
+  padding: 0;
   box-sizing: border-box;
 
   & svg {
@@ -91,7 +92,6 @@
 }
 
 .page-header__logo-link {
-  align-self: center;
   justify-self: center;
 
   & svg {
@@ -115,7 +115,7 @@
   display: flex;
   justify-content: flex-end;
   flex-direction: row;
-  margin-top: 47px;
+  margin: 0;
   padding: 0;
   font-family: "Poppins", "Arial", sans-serif;
   font-weight: 500;

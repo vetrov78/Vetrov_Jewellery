@@ -5,7 +5,7 @@
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   column-gap: 30px;
-  row-gap: 44px;
+  row-gap: 35px;
 }
 
 .shop__item {
@@ -18,15 +18,15 @@
   }
 
   & h2 {
-    margin: 25px 0 0;
+    margin: 22px 0 0;
     font-family: "Poppins", "Arial", sans-serif;
     font-weight: 500;
-    font-size: 16px;
+    font-size: 15px;
     line-height: 21px;
   }
 
   & p {
-    margin: 15px 0 0;
+    margin: 6px 0 0;
     font-family: "Poppins", "Arial", sans-serif;
     font-weight: 700;
     font-size: 14px;
@@ -35,7 +35,7 @@
 }
 
 .shop__bottom-block {
-  margin-top: 80px;
+  margin-top: 73px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -52,6 +52,9 @@
 .shop__pagination-list {
   list-style: none;
   display: flex;
+  margin: 0;
+  margin-left: -33px;
+  padding: 0;
 }
 
 .shop__pagination-item {
@@ -68,6 +71,6 @@
   }
 
   &:not(:first-child) {
-    margin-left: 15px;
+    margin-left: 13px;
   }
 }
