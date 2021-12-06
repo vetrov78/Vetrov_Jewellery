@@ -1,6 +1,6 @@
 .main-page-catalog {
-  max-width: 1170px;
-  margin: 100px auto 0;
+  max-width: 1230px;
+  margin: 90px auto 0;
   padding: 30px 30px 0;
   box-sizing: border-box;
   text-align: center;
@@ -34,14 +34,13 @@
   width: 30px;
   height: 11px;
   stroke: $main-brown;
+  top: 45px;
 
   &--left {
     left: 0;
-    top: 30px;
   }
 
   &--right {
-    top: 30px;
     right: 0;
   }
 
@@ -53,7 +52,7 @@
 .main-page-catalog__catalog-link {
   display: inline-block;
   vertical-align: middle;
-  margin-top: 35px;
+  margin: 25px 0 0;
   color: $main-black;
   font-weight: 500;
   border-bottom: 1px solid $main-brown;
@@ -97,11 +96,15 @@
   }
 
   & h2 {
+    margin-top: 20px;
+    font-family: "Poppins", "Arial", sans-serif;
     font-weight: 500;
     font-size: 16px;
+    line-height: 21px;
   }
 
   & p {
+    margin: 10px 0 0;
     font-weight: 700;
     font-size: 14px;
     line-height: 18px;
@@ -130,7 +133,7 @@
 }
 
 .main-page-catalog__page-number-list {
-  margin: 0;
+  margin: 50px 0 0;
   list-style: none;
   padding: 0;
   display: flex;

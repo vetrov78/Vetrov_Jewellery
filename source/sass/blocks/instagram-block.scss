@@ -1,10 +1,17 @@
 .instagram-block {
   max-width: 1230px;
-  margin: 100px auto 0;
+  margin: 53px auto 80px;
   padding: 30px;
   box-sizing: border-box;
   text-align: center;
 
+  & h2 {
+    margin: 27px 0 0;
+    font-family: "CormorantGaramond", "Times", serif;
+    font-weight: 700;
+    font-size: 34px;
+    line-height: 44px;
+  }
 
   @media (max-width: $tablet-width) {
     margin-top: 80px;
@@ -18,8 +25,12 @@
 }
 
 .instagram-block a {
+  display: inline-block;
+  vertical-align: middle;
   list-style: none;
+  margin: 25px 0 0;
   color: $main-black;
+  line-height: 30px;
   border-bottom: 1px solid $main-brown;
 
   &:hover {
@@ -28,6 +39,7 @@
 }
 
 .instagram-block__photos-list {
+  margin: 60px 0 0;
   list-style: none;
   padding: 0;
   display: grid;
