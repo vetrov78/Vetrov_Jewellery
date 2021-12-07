@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html class="page" lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Login page</title>
+  <link rel="stylesheet" href="css/style.min.css">
+  <link rel="preload" href="fonts/cormorantgaramond-bold.woff2" as="font" type="font/woff2" crossorigin="">
+  <link rel="preload" href="fonts/poppins-regular.woff2" as="font" type="font/woff2" crossorigin="">
+</head>
+<body class="page__body">
+  <header class="page-header page-header--opened">
+    <h1 class="visually-hidden">Page-header</h1>
+    <a class="page-header__logo-link" href="./index.html">
+      <svg>
+        <use xlink:href="/img/sprite.svg#logo"></use>
+      </svg>
+    </a>
+  </header>
+
+  <main class="page-main">
+    <h1 class="visually-hidden">Login page</h1>
+
+    <div class="login-popup__container">
+      <div class="login-popup__promo-image"></div>
+      <h2>Log In</h2>
+      <form type="POST" action="https://echo.htmlacademy.ru">
+        <div class="login-popup__inputs-container">
+          <label for="mail">
+            <input type="text" id="mail" name="mail" aria-label="Your E-mail" placeholder="Your E-mail" required="">
+          </label>
+          <label for="password">
+            <input type="text" id="password" name="password" aria-label="Password" placeholder="Password" required="">
+          </label>
+          <a class="login-popup__forgot-password-link" href="#">Forgot your password?</a>
+        </div>
+        <button class="login-popup__submit-button" type="submit">Log In</button>
+      </form>
+      <p class="login-popup__signup-question">Don’t have an account?
+        <a href="#">Sign up</a>
+      </p>
+      <button class="login-popup__close-button" type="button">
+        <svg>
+          <use xlink:href="img/sprite.svg#close-icon"></use>
+        </svg>
+      </button>
+    </div>
+  </main>
+
+  <!-- <script src="js/jquery-3.6.0.js"></script>
+  <script src="js/jquery-ui.js"></script> -->
+  <script src="js/script.js"></script>
+</body>
+</html>
